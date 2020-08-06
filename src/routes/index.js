@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import store from '@/store/';
 
 Vue.use(VueRouter);
 
@@ -21,6 +22,7 @@ const router = new VueRouter({
 		{
 			path: '/dashboard',
 			component: () => import('@/views/Dashboard.vue'),
+			meta: { auth: true },
 		},
 		{
 			path: '*',
@@ -29,6 +31,12 @@ const router = new VueRouter({
 	],
 });
 
-// router.beforeEach((to, from, next) => {});
+router.beforeEach((to, from, next) => {
+	if (to.meta.auth && !store.getters.isLogin) {
+		next('/login');
+		return;
+	}
+	next();
+});
 
 export default router;

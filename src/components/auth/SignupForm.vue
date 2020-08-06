@@ -30,7 +30,13 @@
 				/>
 			</div>
 
-			<button type="submit" class="ui-btn btn-primary">Signup</button>
+			<button
+				type="submit"
+				class="ui-btn btn-primary"
+				:disabled="!isEmailValid || !password || !nickname"
+			>
+				Signup
+			</button>
 			<p class="mt-2">
 				Allready have an account?
 				<router-link to="/Login">Login</router-link>
@@ -41,6 +47,7 @@
 
 <script>
 import { registerUser } from '@/api/auth';
+import { validateEmail } from '@/utils/validation';
 export default {
 	data() {
 		return {
@@ -48,6 +55,11 @@ export default {
 			nickname: '',
 			password: '',
 		};
+	},
+	computed: {
+		isEmailValid() {
+			return validateEmail(this.username);
+		},
 	},
 	methods: {
 		async submitForm() {

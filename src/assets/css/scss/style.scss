@@ -1,6 +1,12 @@
 @charset "UTF-8";
 
-@import './common/variable';
+// mixin
+@import './mixins/variable';
+
+// common
 @import "./common/reset";
 @import "./common/layout";
-@import "./components/inputGroup";
+@import "./common/auth";
+
+// ui
+@import "./components/uiGroup";

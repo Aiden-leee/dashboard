@@ -1,0 +1,78 @@
+<template>
+	<div class="content_body text-center">
+		<form @submit.prevent="submitForm">
+			<h3 class="mb-2">Signup</h3>
+			<div class="ui-input-group mb-1">
+				<label for="username"></label>
+				<input
+					type="email"
+					placeholder="Email"
+					id="username"
+					v-model="username"
+				/>
+			</div>
+			<div class="ui-input-group mb-1">
+				<label for="nickname"></label>
+				<input
+					type="text"
+					placeholder="Nickname"
+					id="nickname"
+					v-model="nickname"
+				/>
+			</div>
+			<div class="ui-input-group mb-2">
+				<label for="password"></label>
+				<input
+					type="password"
+					placeholder="Password"
+					id="password"
+					v-model="password"
+				/>
+			</div>
+
+			<button type="submit" class="ui-btn btn-primary">Signup</button>
+			<p class="mt-2">
+				Allready have an account?
+				<router-link to="/Login">Login</router-link>
+			</p>
+		</form>
+	</div>
+</template>
+
+<script>
+import { registerUser } from '@/api/auth';
+export default {
+	data() {
+		return {
+			username: '',
+			nickname: '',
+			password: '',
+		};
+	},
+	methods: {
+		async submitForm() {
+			const userData = {
+				username: this.username,
+				nickname: this.nickname,
+				password: this.password,
+			};
+			try {
+				const { data } = await registerUser(userData);
+				console.log(data);
+			} catch (error) {
+				console.log(error.response);
+			} finally {
+				this.$router.push('/login');
+				this.initForm();
+			}
+		},
+		initForm() {
+			this.username = '';
+			this.password = '';
+			this.nickname = '';
+		},
+	},
+};
+</script>
+
+<style></style>

@@ -1,21 +1,18 @@
 <template>
 	<AuthWrap>
-		<LoginForm></LoginForm>
+		<SignupForm></SignupForm>
 	</AuthWrap>
 </template>
 
 <script>
 import AuthWrap from '@/components/auth/AuthWrap.vue';
-import LoginForm from '@/components/auth/LoginForm.vue';
+import SignupForm from '@/components/auth/SignupForm.vue';
 export default {
-	data() {
-		return {};
-	},
 	components: {
 		AuthWrap,
-		LoginForm,
+		SignupForm,
 	},
 };
 </script>
 
-<style lang="scss"></style>
+<style></style>

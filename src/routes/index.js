@@ -13,15 +13,42 @@ const router = new VueRouter({
 		},
 		{
 			path: '/login',
-			component: () => import('@/views/LoginPage.vue'),
+			component: () => import('@/views/auth/LoginPage.vue'),
 		},
 		{
 			path: '/signup',
-			component: () => import('@/views/SignupPage.vue'),
+			component: () => import('@/views/auth/SignupPage.vue'),
 		},
 		{
 			path: '/dashboard',
-			component: () => import('@/views/Dashboard.vue'),
+			name: 'Dashboard',
+			component: () => import('@/views/dashboard/Dashboard.vue'),
+			meta: { auth: true },
+		},
+		{
+			path: '/component',
+			name: 'Component',
+			component: () => import('@/components/layouts/Layout.vue'),
+			children: [
+				{
+					path: 'button',
+					name: 'Component',
+					component: () => import('@/views/component/ButtonPage.vue'),
+				},
+			],
+			meta: { auth: true },
+		},
+		{
+			path: '/formTable',
+			name: 'formTable',
+			component: () => import('@/components/layouts/Layout.vue'),
+			children: [
+				{
+					path: 'table',
+					name: 'formTable',
+					component: () => import('@/views/formTable/TablePage.vue'),
+				},
+			],
 			meta: { auth: true },
 		},
 		{

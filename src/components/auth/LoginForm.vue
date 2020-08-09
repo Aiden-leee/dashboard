@@ -51,6 +51,7 @@ export default {
 			};
 			try {
 				await this.$store.dispatch('LOGIN', userData);
+				console.log('a');
 			} catch (error) {
 				console.log(error.response.data);
 			} finally {

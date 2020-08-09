@@ -7,3 +7,96 @@ body{
     min-height: 100vh;
 }
 
+.navigation {
+    position: fixed;
+    width: 265px;
+    height: 100vh;
+    background: #3f4d67;
+    box-shadow: 1px 0 20px 0 #3f4d67;
+    transition: $layoutTransition;
+
+    .navigation_header{
+       .brand{
+           padding: 10px 20px;
+           > a{
+               display: flex;
+               align-items: center;
+               .brand_title {
+                    display: inline-block;
+                    color: #d0d0d0;
+                    margin-left: 10px;
+               }
+           }
+       }
+    }
+    .navigation_body{
+        padding: 20px 0;
+        border-top: 1px solid #545c6b;
+        height: calc( 100% - 70px);
+        color: #fff;
+        > ul{
+            > li{
+                & > a{
+                    width: 100%;
+                    display: inline-flex;
+                    align-items: center;
+                    padding: 10px 20px;
+                    font-size: 18px;
+                    color: $navTextColor;
+                    & + .sub_menu{
+                        display: none;
+                        transition: $layoutTransition;
+                    }
+                    &.router-link-active{
+                        background: #212b3c;
+                        color: #fff;
+                    }
+                    
+                    &.active{
+                        background: #7da2a7;
+                        color: #fff;
+                        .fold_arrow{
+                            color: #fff;
+                        }
+                    }
+                    &.active + .sub_menu{
+                        display: block;
+                    }
+                }
+                .ion{
+                    width: 20px;
+                    height: 20px;
+                    font-size: 20px;
+                    margin-right: 8px;
+                }
+                // .router-link-active{
+                //     color: $navActive;
+                // }
+                > .sub_menu{
+                    background: #343a46;
+                    > ul {
+                        > li{
+                            .router-link-active{
+                                color: $navActive;
+                            }
+                            > a {
+                                display: block;
+                                padding: 15px 0 15px 60px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.page{
+    .content{
+        width: calc(100% - 265px);
+        margin-left: 265px;
+        min-height: 100vh;
+        transition: $layoutTransition;
+    }
+}

@@ -1,31 +1,29 @@
 <template>
-	<div class="page">
-		<router-link :to="logoLink">Logo</router-link>
-		<nav>
-			<ul>
-				<li>menu</li>
-			</ul>
-		</nav>
-		<div class="content">
+	<Layout>
+		<template v-slot:content>
 			<header>
 				<template v-if="isUserLogin">
 					<a href="javascript:;" @click="handleLogout">Logout</a>
 				</template>
 			</header>
-		</div>
-	</div>
+		</template>
+	</Layout>
 </template>
 
 <script>
+import Layout from '@/components/layouts/Layout.vue';
 import { deleteCookie } from '@/utils/cookies';
 export default {
+	components: {
+		Layout,
+	},
 	computed: {
 		isUserLogin() {
 			return this.$store.getters.isLogin;
 		},
-		logoLink() {
-			return this.$store.getters.isLogin ? '/main' : '/login';
-		},
+		// logoLink() {
+		// 	return this.$store.getters.isLogin ? '/dashboard' : '/login';
+		// },
 	},
 	methods: {
 		handleLogout() {

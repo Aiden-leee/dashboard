@@ -3,6 +3,14 @@
   text-align: center;
 }
 
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
 .mt-1 {
   margin-top: 10px;
 }
@@ -65,6 +73,10 @@
 
 .mr-4 {
   margin-right: 40px;
+}
+
+.bold {
+  --ionicon-stroke-width: 40px;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -142,6 +154,108 @@ body {
   color: #888;
   background: #f4f7fa;
   min-height: 100vh;
+}
+
+.navigation {
+  position: fixed;
+  width: 265px;
+  height: 100vh;
+  background: #3f4d67;
+  -webkit-box-shadow: 1px 0 20px 0 #3f4d67;
+          box-shadow: 1px 0 20px 0 #3f4d67;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.navigation .navigation_header .brand {
+  padding: 10px 20px;
+}
+
+.navigation .navigation_header .brand > a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navigation .navigation_header .brand > a .brand_title {
+  display: inline-block;
+  color: #d0d0d0;
+  margin-left: 10px;
+}
+
+.navigation .navigation_body {
+  padding: 20px 0;
+  border-top: 1px solid #545c6b;
+  height: calc( 100% - 70px);
+  color: #fff;
+}
+
+.navigation .navigation_body > ul > li > a {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: #8a929c;
+}
+
+.navigation .navigation_body > ul > li > a + .sub_menu {
+  display: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.navigation .navigation_body > ul > li > a.router-link-active {
+  background: #212b3c;
+  color: #fff;
+}
+
+.navigation .navigation_body > ul > li > a.active {
+  background: #7da2a7;
+  color: #fff;
+}
+
+.navigation .navigation_body > ul > li > a.active .fold_arrow {
+  color: #fff;
+}
+
+.navigation .navigation_body > ul > li > a.active + .sub_menu {
+  display: block;
+}
+
+.navigation .navigation_body > ul > li .ion {
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+.navigation .navigation_body > ul > li > .sub_menu {
+  background: #343a46;
+}
+
+.navigation .navigation_body > ul > li > .sub_menu > ul > li .router-link-active {
+  color: #86ffff;
+}
+
+.navigation .navigation_body > ul > li > .sub_menu > ul > li > a {
+  display: block;
+  padding: 15px 0 15px 60px;
+}
+
+.page .content {
+  width: calc(100% - 265px);
+  margin-left: 265px;
+  min-height: 100vh;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .auth_wrapper {

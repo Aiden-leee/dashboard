@@ -69,8 +69,7 @@ export default {
 				password: this.password,
 			};
 			try {
-				const { data } = await registerUser(userData);
-				console.log(data);
+				await registerUser(userData);
 			} catch (error) {
 				console.log(error.response);
 			} finally {

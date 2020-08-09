@@ -6,10 +6,19 @@ $layoutTransition: all .3s ease-in-out;
 // component 
 $cpRadius: 5px;
 $cpShadow: 0 10px 18px 0 rgba(62,57,107,.2);
+$navTextColor: #8a929c;
+$navActive: #86ffff;
+$navSubActive: #dedede;
 
 
-.text-center{
+.text-center {
     text-align: center;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
 }
 
 // margin, padding
@@ -68,3 +77,8 @@ $cpShadow: 0 10px 18px 0 rgba(62,57,107,.2);
 .mr-4 {
     margin-right: 40px;
 }
+
+.bold {
+    --ionicon-stroke-width: 40px;
+}
+

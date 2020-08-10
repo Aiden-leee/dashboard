@@ -5,7 +5,7 @@
 				<a
 					href="#"
 					@click.self="handleToggle"
-					:class="list.name === pathName ? 'active' : ''"
+					:class="list.name === pathName ? 'expanded' : ''"
 				>
 					<ion-icon :name="list.icon" class="ion bold"></ion-icon>
 					{{ list.title }}
@@ -46,6 +46,11 @@ export default {
 	},
 	created() {
 		// console.log(this.$route);
+	},
+	watch: {
+		$route: function() {
+			this.pathName = this.$route.name;
+		},
 	},
 	methods: {
 		handleToggle(event) {

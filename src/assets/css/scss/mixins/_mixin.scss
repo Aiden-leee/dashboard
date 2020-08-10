@@ -1,0 +1,3 @@
+@mixin createCol($col){
+    width: 100%/$col;
+}

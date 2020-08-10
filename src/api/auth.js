@@ -9,4 +9,8 @@ const loginUser = userData => {
 	return instance.post('login', userData);
 };
 
-export { registerUser, loginUser };
+const chartApi = chartNumber => {
+	return instance.get('chart', chartNumber);
+};
+
+export { registerUser, loginUser, chartApi };

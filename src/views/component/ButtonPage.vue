@@ -1,11 +1,19 @@
 <template>
-	<div>
-		buttonpage
-	</div>
+	<Layout>
+		<template v-slot:content> </template>
+	</Layout>
 </template>
 
 <script>
-export default {};
+import Layout from '@/components/layouts/Layout.vue';
+
+export default {
+	components: {
+		Layout,
+	},
+	computed: {},
+	methods: {},
+};
 </script>
 
 <style></style>

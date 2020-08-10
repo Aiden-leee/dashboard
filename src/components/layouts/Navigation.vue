@@ -81,13 +81,13 @@ export default {
 				{
 					path: '/formTable',
 					title: 'Form & Table',
-					name: 'formTable',
+					name: 'FormTable',
 					icon: 'document-text-outline',
 					children: [
 						{
 							path: '/table',
 							title: 'Table',
-							name: 'formTable',
+							name: 'FormTable',
 						},
 					],
 				},

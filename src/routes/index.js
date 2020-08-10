@@ -40,12 +40,12 @@ const router = new VueRouter({
 		},
 		{
 			path: '/formTable',
-			name: 'formTable',
+			name: 'FormTable',
 			component: () => import('@/components/layouts/Layout.vue'),
 			children: [
 				{
 					path: 'table',
-					name: 'formTable',
+					name: 'FormTable',
 					component: () => import('@/views/formTable/TablePage.vue'),
 				},
 			],

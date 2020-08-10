@@ -11,6 +11,10 @@
   text-align: right;
 }
 
+.captialize {
+  text-transform: capitalize;
+}
+
 .mt-1 {
   margin-top: 10px;
 }
@@ -167,6 +171,11 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
+.navigation .navigation_header {
+  height: 70px;
+  border-bottom: 1px solid #545c6b;
+}
+
 .navigation .navigation_header .brand {
   padding: 10px 20px;
 }
@@ -187,8 +196,6 @@ body {
 }
 
 .navigation .navigation_body {
-  padding: 20px 0;
-  border-top: 1px solid #545c6b;
   height: calc( 100% - 70px);
   color: #fff;
 }
@@ -217,13 +224,17 @@ body {
   color: #fff;
 }
 
-.navigation .navigation_body > ul > li > a.active {
+.navigation .navigation_body > ul > li > a.active, .navigation .navigation_body > ul > li > a.expanded {
   background: #7da2a7;
   color: #fff;
 }
 
-.navigation .navigation_body > ul > li > a.active .fold_arrow {
+.navigation .navigation_body > ul > li > a.active .fold_arrow, .navigation .navigation_body > ul > li > a.expanded .fold_arrow {
   color: #fff;
+}
+
+.navigation .navigation_body > ul > li > a.expanded + .sub_menu {
+  display: block;
 }
 
 .navigation .navigation_body > ul > li > a.active + .sub_menu {
@@ -233,7 +244,6 @@ body {
 .navigation .navigation_body > ul > li .ion {
   width: 20px;
   height: 20px;
-  font-size: 20px;
   margin-right: 8px;
 }
 
@@ -250,12 +260,168 @@ body {
   padding: 15px 0 15px 60px;
 }
 
+.ion {
+  width: 25px;
+  height: 25px;
+  visibility: visible;
+}
+
 .page .content {
   width: calc(100% - 265px);
   margin-left: 265px;
   min-height: 100vh;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+
+.page .content > header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70px;
+  padding: 10px;
+  border-bottom: 1px solid #ececec;
+}
+
+.page .content > header .logout {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.page_view {
+  min-height: calc(100vh - 70px);
+  padding: 30px;
+}
+
+.page_view .page_header .page_title {
+  font-size: 25px;
+  color: #505050;
+}
+
+.page_view .page_header .page_path {
+  margin-top: 10px;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.row .col {
+  position: relative;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.row .col.col-1 {
+  width: 100%;
+}
+
+.row .col.col-2 {
+  width: 50%;
+}
+
+.row .col.col-3 {
+  width: 33.33333%;
+}
+
+.row .col.col-4 {
+  width: 25%;
+}
+
+.row .col.col-5 {
+  width: 20%;
+}
+
+.row .col.col-6 {
+  width: 16.66667%;
+}
+
+.row .col.col-7 {
+  width: 14.28571%;
+}
+
+.row .col.col-8 {
+  width: 12.5%;
+}
+
+.row .col.col-9 {
+  width: 11.11111%;
+}
+
+.row .col.col-10 {
+  width: 10%;
+}
+
+.row .col.col-11 {
+  width: 9.09091%;
+}
+
+.row .col.col-12 {
+  width: 8.33333%;
+}
+
+.row .col .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 30px;
+  min-height: 200px;
+  background: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+          box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.row .col .card .card_header {
+  min-height: 57px;
+  padding: 20px 25px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.row .col .card .card_header > h4 {
+  position: relative;
+  color: #505b6f;
+}
+
+.row .col .card .card_header > h4:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -25px;
+  display: inline-block;
+  width: 4px;
+  height: 20px;
+  background: #84d8d1;
+}
+
+.row .col .card .card_body {
+  width: 100%;
+  padding: 20px 25px;
+  font-size: 14px;
+}
+
+.row .col .card .card_body > .text {
+  margin-bottom: 10px;
+}
+
+.row .col .card .card_body > .text a:hover {
+  color: #000;
 }
 
 .auth_wrapper {

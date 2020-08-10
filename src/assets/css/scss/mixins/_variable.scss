@@ -9,7 +9,7 @@ $cpShadow: 0 10px 18px 0 rgba(62,57,107,.2);
 $navTextColor: #8a929c;
 $navActive: #86ffff;
 $navSubActive: #dedede;
-
+$cardTitleColor: #505b6f;
 
 .text-center {
     text-align: center;
@@ -21,6 +21,9 @@ $navSubActive: #dedede;
     text-align: right;
 }
 
+.captialize {
+    text-transform: capitalize;
+}
 // margin, padding
 
 // margin top

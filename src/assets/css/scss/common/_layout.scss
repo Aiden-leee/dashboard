@@ -2,7 +2,7 @@ body{
     position: relative;
     font-family: NotoSansKR,"맑은 고딕","Malgun Gothic","Apple Gothic",Helvetica,Arial,sans-serif;
     font-size: 16px;
-    color: #888;
+    color: $defaultColor;
     background: #f4f7fa;
     min-height: 100vh;
 }
@@ -101,7 +101,7 @@ body{
 }
 
 .page{
-    .content{
+    > .content{
         width: calc(100% - 265px);
         margin-left: 265px;
         min-height: 100vh;
@@ -109,8 +109,9 @@ body{
         > header{
             display: flex;
             align-items: center;
+            justify-content: flex-end;
             height: 70px;
-            padding: 10px;
+            padding: 10px 30px;
             border-bottom: 1px solid #ececec;
             .logout{
                 justify-content: flex-end;
@@ -177,7 +178,7 @@ body{
                         display: inline-block;
                         width: 4px;
                         height: 20px;
-                        background: #84d8d1;
+                        background: $pointColor;
                     }
                 }
             }
@@ -190,6 +191,46 @@ body{
                     a {
                         &:hover{
                             color: #000;
+                        }
+                    }
+                }
+                .box{
+                    &.career{
+                        border-bottom: 1px dashed #eaeaea;
+                        &:last-child{
+                            border-bottom: 0;
+                        }
+                        > .title{
+                            position: relative; 
+                            font-size: 18px;
+                            color: #000;
+                            &:after{
+                                content: "";
+                                position: absolute;
+                                left: -12px;
+                                top: 50%;
+                                width: 6px;
+                                height: 6px;
+                                margin-top: -3px;
+                                border-radius: 2px;
+                                background: $pointColor;
+                            }
+                            > span {
+                                font-size: 14px;
+                                color: $defaultColor;
+                            }
+                        }
+                        > .range{
+                            display: inline-block;
+                            padding: 5px 0;
+                        }
+                        > .content{
+                            padding: 10px 0;
+                            line-height: 1.5;
+                            .link{
+                                display: block;
+                                
+                            }
                         }
                     }
                 }

@@ -40,7 +40,7 @@ export default {
 					// 인포윈도우로 장소에 대한 설명을 표시합니다
 					var infowindow = new window.kakao.maps.InfoWindow({
 						content:
-							'<div style="width:150px;text-align:center;padding:6px 0;">I am Here</div>',
+							'<div style="width:150px;text-align:center;padding:6px 0;">I\'m Here</div>',
 					});
 					infowindow.open(map, marker);
 

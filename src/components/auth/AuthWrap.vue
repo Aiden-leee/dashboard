@@ -1,23 +1,9 @@
 <template>
 	<div class="auth_wrapper">
 		<ul class="circles">
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
+			<li v-for="n in 10" :key="n"></li>
 		</ul>
 		<div class="auth_content">
-			<!-- <div class="shape-box">
-				<div class="shape-circle circle1"></div>
-				<div class="shape-circle circle2"></div>
-			</div> -->
-
 			<div class="card">
 				<slot></slot>
 			</div>

@@ -1,6 +1,12 @@
 <template>
 	<Layout>
-		<template v-slot:content> </template>
+		<template v-slot:content>
+			<div class="row">
+				<div class="col">
+					tests
+				</div>
+			</div>
+		</template>
 	</Layout>
 </template>
 

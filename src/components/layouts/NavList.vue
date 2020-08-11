@@ -3,7 +3,7 @@
 		<li v-for="(list, idx) in menu" :key="idx">
 			<template v-if="list.children !== null">
 				<a
-					href="#"
+					href="javascript:;"
 					@click.self="handleToggle"
 					:class="list.name === pathName ? 'expanded' : ''"
 				>
@@ -43,9 +43,6 @@ export default {
 			type: Array,
 			required: true,
 		},
-	},
-	created() {
-		// console.log(this.$route);
 	},
 	watch: {
 		$route: function() {

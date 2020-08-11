@@ -35,13 +35,18 @@ const router = new VueRouter({
 					name: 'Component',
 					component: () => import('@/views/component/ButtonPage.vue'),
 				},
+				{
+					path: 'tab',
+					name: 'Component',
+					component: () => import('@/views/component/TabPage.vue'),
+				},
 			],
 			meta: { auth: true },
 		},
 		{
 			path: '/formTable',
 			name: 'FormTable',
-			component: () => import('@/components/layouts/Layout.vue'),
+			component: () => import('@/views/formTable/TablePage.vue'),
 			children: [
 				{
 					path: 'table',

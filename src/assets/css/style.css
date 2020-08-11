@@ -266,7 +266,7 @@ body {
   visibility: visible;
 }
 
-.page .content {
+.page > .content {
   width: calc(100% - 265px);
   margin-left: 265px;
   min-height: 100vh;
@@ -274,19 +274,22 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.page .content > header {
+.page > .content > header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   height: 70px;
-  padding: 10px;
+  padding: 10px 30px;
   border-bottom: 1px solid #ececec;
 }
 
-.page .content > header .logout {
+.page > .content > header .logout {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -422,6 +425,51 @@ body {
 
 .row .col .card .card_body > .text a:hover {
   color: #000;
+}
+
+.row .col .card .card_body .box.career {
+  border-bottom: 1px dashed #eaeaea;
+}
+
+.row .col .card .card_body .box.career:last-child {
+  border-bottom: 0;
+}
+
+.row .col .card .card_body .box.career > .title {
+  position: relative;
+  font-size: 18px;
+  color: #000;
+}
+
+.row .col .card .card_body .box.career > .title:after {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  margin-top: -3px;
+  border-radius: 2px;
+  background: #84d8d1;
+}
+
+.row .col .card .card_body .box.career > .title > span {
+  font-size: 14px;
+  color: #888;
+}
+
+.row .col .card .card_body .box.career > .range {
+  display: inline-block;
+  padding: 5px 0;
+}
+
+.row .col .card .card_body .box.career > .content {
+  padding: 10px 0;
+  line-height: 1.5;
+}
+
+.row .col .card .card_body .box.career > .content .link {
+  display: block;
 }
 
 .auth_wrapper {

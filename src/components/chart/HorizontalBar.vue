@@ -16,19 +16,13 @@ export default {
 			type: Object,
 			required: true,
 		},
-		options: {
-			type: Object,
-			required: false,
-		},
 	},
 	created() {},
 	mounted() {
-		// console.log(this.chartData);
 		this.createChart();
 	},
 	methods: {
 		createChart() {
-			console.log(this.chartData);
 			let _this = this;
 			let ctx = _this.id;
 			new Chart(ctx, {

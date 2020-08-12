@@ -56,3 +56,8 @@ a{
 img{ 
 	display: block;
 }
+button {
+	&:focus {
+		outline: none;
+	}
+}

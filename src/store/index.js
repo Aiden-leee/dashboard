@@ -3,8 +3,10 @@ import Vuex from 'vuex';
 import {
 	saveAuthToCookie,
 	saveUserToCookie,
+	saveNicknameToCookie,
 	getAuthFromCookie,
 	getUserFromCookie,
+	getNicknameFromCookie,
 } from '@/utils/cookies';
 import { loginUser } from '../api/auth';
 
@@ -14,6 +16,7 @@ export default new Vuex.Store({
 	state: {
 		username: getUserFromCookie() || '',
 		token: getAuthFromCookie() || '',
+		nickname: getNicknameFromCookie() || '',
 	},
 	getters: {
 		isLogin(state) {
@@ -33,14 +36,22 @@ export default new Vuex.Store({
 		clearToken(state) {
 			state.token = '';
 		},
+		saveNickname(state, nickname) {
+			state.nickname = nickname;
+		},
+		clearNickname(state) {
+			state.nickname = '';
+		},
 	},
 	actions: {
 		async LOGIN({ commit }, userData) {
 			const { data } = await loginUser(userData);
 			commit('setToken', data.token);
 			commit('setUsername', data.user.username);
+			commit('saveNickname', data.user.nickname);
 			saveAuthToCookie(data.token);
 			saveUserToCookie(data.user.username);
+			saveNicknameToCookie(data.user.nickname);
 			return data;
 		},
 	},

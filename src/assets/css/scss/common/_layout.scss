@@ -37,15 +37,20 @@ body{
         > ul{
             > li{
                 & > a{
+                    position: relative;
                     width: 100%;
                     display: inline-flex;
                     align-items: center;
                     padding: 10px 20px;
                     font-size: 18px;
                     color: $navTextColor;
+                    > * {
+                        pointer-events: none;;
+                    }
                     & + .sub_menu{
-                        display: none;
-                        transition: $layoutTransition;
+                        max-height: 0;
+                        overflow: hidden;
+                        transition: all 0.3s linear;
                     }
                     &.router-link-active{
                         background: #212b3c;
@@ -57,13 +62,13 @@ body{
                         color: #fff;
                         .fold_arrow{
                             color: #fff;
+                            transform: rotate(-180deg);
                         }
                     }
-                    &.expanded + .sub_menu{
-                        display: block;
-                    }
+                    &.expanded + .sub_menu,
                     &.active + .sub_menu{
                         display: block;
+                        max-height: 10em;
                     }
                 }
                 .ion{
@@ -71,9 +76,11 @@ body{
                     height: 20px;
                     margin-right: 8px;
                 }
-                // .router-link-active{
-                //     color: $navActive;
-                // }
+                .fold_arrow{
+                    position: absolute;
+                    right: 20px;
+                    transition: all 0.2s linear;
+                }
                 > .sub_menu{
                     background: #343a46;
                     > ul {
@@ -100,6 +107,15 @@ body{
     // font-size: 30px;
 }
 
+header{
+    .nickname{
+        display: inline-block;
+        color: #000;
+        margin-right: 10px;
+    }
+}
+
+// page content
 .page{
     > .content{
         width: calc(100% - 265px);
@@ -138,6 +154,7 @@ body{
     }
 }
 
+// row column
 .row{
     display: flex;
     flex-wrap: wrap;
@@ -186,12 +203,24 @@ body{
                 width: 100%;
                 padding: 20px 25px;
                 font-size: 14px;
+                flex: 1 1 auto;
+        
                 > .text {
                     margin-bottom: 10px;
                     a {
                         &:hover{
                             color: #000;
                         }
+                    }
+                    &.explain {
+                        > strong {
+                            display: inline-block;
+                            color: #bf4d28;
+                            background: #ddd;
+                            padding: 5px;
+                            border-radius: $cpRadius;
+                        }
+                        
                     }
                 }
                 .box{
@@ -229,7 +258,7 @@ body{
                             line-height: 1.5;
                             .link{
                                 display: block;
-                                
+
                             }
                         }
                     }

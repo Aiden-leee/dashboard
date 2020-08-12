@@ -1,6 +1,7 @@
 <template>
 	<header>
 		<template v-if="isUserLogin">
+			<span class="nickname">{{ this.$store.state.nickname }} 님</span>
 			<a href="javascript:;" class="logout" @click="handleLogout"
 				><ion-icon name="log-out-outline" class="ion bold"></ion-icon
 			></a>
@@ -18,8 +19,10 @@ export default {
 		handleLogout() {
 			this.$store.commit('clearUsername');
 			this.$store.commit('clearToken');
+			this.$store.commit('clearNickname');
 			deleteCookie('til_auth');
 			deleteCookie('til_user');
+			deleteCookie('til_nickname');
 			this.$router.push('/login');
 		},
 	},

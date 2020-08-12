@@ -4,6 +4,7 @@ import store from '@/store/';
 
 Vue.use(VueRouter);
 
+const emptyComponent = { template: '<router-view></router-view>' };
 const router = new VueRouter({
 	mode: 'history',
 	routes: [
@@ -28,7 +29,7 @@ const router = new VueRouter({
 		{
 			path: '/component',
 			name: 'Component',
-			component: () => import('@/components/layouts/Layout.vue'),
+			component: emptyComponent,
 			children: [
 				{
 					path: 'button',

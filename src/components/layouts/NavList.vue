@@ -8,7 +8,7 @@
 					:class="list.name === pathName ? 'expanded' : ''"
 				>
 					<ion-icon :name="list.icon" class="ion bold"></ion-icon>
-					{{ list.title }}
+					<span>{{ list.title }}</span>
 					<ion-icon name="chevron-down-outline" class="fold_arrow"></ion-icon>
 				</a>
 				<div class="sub_menu">

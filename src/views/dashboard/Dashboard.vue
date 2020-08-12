@@ -1,114 +1,111 @@
 <template>
-	<Layout>
-		<template v-slot:content>
-			<div class="row">
-				<div class="col col-1">
-					<div class="card">
-						<div class="card_header">
-							<h4>Profile</h4>
+	<div>
+		<!-- <Layout>
+		<template v-slot:content> -->
+		<div class="row">
+			<div class="col col-1">
+				<div class="card">
+					<div class="card_header">
+						<h4>Profile</h4>
+					</div>
+					<div class="card_body">
+						<p class="text"><span>Name: Lee Dong Hyun</span></p>
+						<p class="text"><span>Age: 30</span></p>
+						<p class="text"><span>Email: wlvmf3409@naver.com</span></p>
+						<p class="text">
+							<span
+								>Github:
+								<a href="https://github.com/Aiden-leee" target="_blank"
+									>Github Link</a
+								></span
+							>
+						</p>
+						<p class="text"><span>Phone: 010-6286-10xx</span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col col-1">
+				<div class="card">
+					<div class="card_header">
+						<h4>Career</h4>
+					</div>
+					<div class="card_body">
+						<div class="box career mb-2">
+							<h5 class="title">알에스엔 <span>빅데이터 솔루션 제작</span></h5>
+							<span class="range">2018.03 ~ 2020.03</span>
+							<p class="content">
+								LG uplus, 아모레퍼시픽, 코카콜라, 쉐보레&캐딜락 등등 대시보드
+								제작 하였음<br />
+								사용언어: html&css, Sass, jQuery, Vue.js, amchart.js
+								<span class="link">Url: <a href="javascript:;">없음</a></span>
+							</p>
 						</div>
-						<div class="card_body">
-							<p class="text"><span>Name: Lee Dong Hyun</span></p>
-							<p class="text"><span>Age: 30</span></p>
-							<p class="text"><span>Email: wlvmf3409@naver.com</span></p>
-							<p class="text">
-								<span
-									>Github:
-									<a href="https://github.com/Aiden-leee" target="_blank"
-										>Github Link</a
+						<div class="box career mb-2">
+							<h5 class="title">이노웹 <span>웹 에이전시</span></h5>
+							<span class="range">2016.05 ~ 2017.12</span>
+							<p class="content">
+								아이리움병원(랜딩페이지), 치덴, 성동청소년수련관, 엔씨비전,
+								암스트롱 요양병원 등등 회사형 사이트 제작<br />
+								사용언어: html&css, jQuery, mediaQuery
+								<span class="link"
+									>Url:
+									<a href="http://dhweb.dothome.co.kr/" target="_blank"
+										>Link</a
 									></span
 								>
 							</p>
-							<p class="text"><span>Phone: 010-6286-10xx</span></p>
+						</div>
+						<div class="box career">
+							<h5 class="title">
+								펀타스틱코리아(funtastic korea) <span>외국인 여행사</span>
+							</h5>
+							<span class="range">2016.02 ~ 2016.04</span>
+							<p class="content">
+								자사 사이트 웹 퍼블리싱 작업 하였음<br />
+								사용언어: html&css, jQuery, mediaQuery
+								<span class="link"
+									>Url:
+									<a href="https://www.funtastickorea.com/en" target="_blank"
+										>Link</a
+									></span
+								>
+							</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col col-1">
-					<div class="card">
-						<div class="card_header">
-							<h4>Career</h4>
-						</div>
-						<div class="card_body">
-							<div class="box career mb-2">
-								<h5 class="title">
-									알에스엔 <span>빅데이터 솔루션 제작</span>
-								</h5>
-								<span class="range">2018.03 ~ 2020.03</span>
-								<p class="content">
-									LG uplus, 아모레퍼시픽, 코카콜라, 쉐보레&캐딜락 등등 대시보드
-									제작 하였음<br />
-									사용언어: html&css, Sass, jQuery, Vue.js, amchart.js
-									<span class="link">Url: <a href="javascript:;">없음</a></span>
-								</p>
-							</div>
-							<div class="box career mb-2">
-								<h5 class="title">이노웹 <span>웹 에이전시</span></h5>
-								<span class="range">2016.05 ~ 2017.12</span>
-								<p class="content">
-									아이리움병원(랜딩페이지), 치덴, 성동청소년수련관, 엔씨비전,
-									암스트롱 요양병원 등등 회사형 사이트 제작<br />
-									사용언어: html&css, jQuery, mediaQuery
-									<span class="link"
-										>Url:
-										<a href="http://dhweb.dothome.co.kr/" target="_blank"
-											>Link</a
-										></span
-									>
-								</p>
-							</div>
-							<div class="box career">
-								<h5 class="title">
-									펀타스틱코리아(funtastic korea) <span>외국인 여행사</span>
-								</h5>
-								<span class="range">2016.02 ~ 2016.04</span>
-								<p class="content">
-									자사 사이트 웹 퍼블리싱 작업 하였음<br />
-									사용언어: html&css, jQuery, mediaQuery
-									<span class="link"
-										>Url:
-										<a href="https://www.funtastickorea.com/en" target="_blank"
-											>Link</a
-										></span
-									>
-								</p>
-							</div>
-						</div>
+		</div>
+		<div class="row">
+			<div class="col col-2">
+				<div class="card">
+					<div class="card_header">
+						<h4>Residence</h4>
+					</div>
+					<div class="card_body">
+						<Map></Map>
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col col-2">
-					<div class="card">
-						<div class="card_header">
-							<h4>Residence</h4>
-						</div>
-						<div class="card_body">
-							<Map></Map>
-						</div>
+			<div class="col col-2">
+				<div class="card">
+					<div class="card_header">
+						<h4>Skills</h4>
 					</div>
-				</div>
-				<div class="col col-2">
-					<div class="card">
-						<div class="card_header">
-							<h4>Skills</h4>
-						</div>
-						<div class="card_body">
-							<HorizontalBar
-								id="myChart1"
-								:chartData="chartData"
-							></HorizontalBar>
-						</div>
+					<div class="card_body">
+						<HorizontalBar id="myChart1" :chartData="chartData"></HorizontalBar>
 					</div>
 				</div>
 			</div>
-		</template>
-	</Layout>
+		</div>
+		<!-- </template>
+	</Layout> -->
+	</div>
 </template>
 
 <script>
-import Layout from '@/components/layouts/Layout.vue';
+// import Layout from '@/components/layouts/Layout.vue';
 import HorizontalBar from '@/components/chart/HorizontalBar.vue';
 import Map from '@/components/map/Map.vue';
 
@@ -119,7 +116,7 @@ export default {
 		};
 	},
 	components: {
-		Layout,
+		// Layout,
 		HorizontalBar,
 		Map,
 	},

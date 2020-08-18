@@ -1,5 +1,5 @@
 <template>
-	<nav class="navigation">
+	<nav class="navigation" ref="nav" :class="isOpen">
 		<div class="navigation_header">
 			<div class="brand">
 				<router-link to="/dashboard">
@@ -67,6 +67,12 @@ export default {
 			],
 		};
 	},
+	computed: {
+		isOpen() {
+			return this.$store.state.isWrap ? 'menu-open' : '';
+		},
+	},
+	mounted() {},
 };
 </script>
 

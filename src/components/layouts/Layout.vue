@@ -1,5 +1,6 @@
 <template>
 	<div class="page">
+		<div class="wrapper" :class="isWrapOpen" @click="isOff"></div>
 		<Navigation></Navigation>
 		<div class="content">
 			<Header></Header>
@@ -22,11 +23,17 @@
 import Navigation from '@/components/layouts/Navigation.vue';
 import Header from '@/components/layouts/Header.vue';
 export default {
+	data() {
+		return {};
+	},
 	components: {
 		Navigation,
 		Header,
 	},
 	computed: {
+		isWrapOpen() {
+			return this.$store.state.isWrap ? 'on' : '';
+		},
 		isCurrentPath() {
 			const route = this.getRouteArray();
 			return route[route.length - 1];
@@ -42,12 +49,17 @@ export default {
 			return output;
 		},
 	},
+
 	methods: {
 		getRouteArray() {
 			const arr = this.$route.path.split('/');
 			const result = [];
 			arr.filter(item => (item !== '' ? result.push(item) : ''));
 			return result;
+		},
+		isOff() {
+			this.$store.commit('isWrapOpen', false);
+			this.$store.commit('isMenuStatus', false);
 		},
 	},
 };

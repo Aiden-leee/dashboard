@@ -17,6 +17,8 @@ export default new Vuex.Store({
 		username: getUserFromCookie() || '',
 		token: getAuthFromCookie() || '',
 		nickname: getNicknameFromCookie() || '',
+		isWrap: false,
+		isMenuOpen: false,
 	},
 	getters: {
 		isLogin(state) {
@@ -41,6 +43,12 @@ export default new Vuex.Store({
 		},
 		clearNickname(state) {
 			state.nickname = '';
+		},
+		isWrapOpen(state, check) {
+			state.isWrap = check;
+		},
+		isMenuStatus(state, check) {
+			state.isMenuOpen = check;
 		},
 	},
 	actions: {

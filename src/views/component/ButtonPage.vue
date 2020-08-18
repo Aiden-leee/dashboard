@@ -67,6 +67,72 @@
 										</td>
 										<td>information-circle-outline</td>
 									</tr>
+									<tr>
+										<td>
+											<Button type="button" class="mr-1" icon="happy-outline" />
+										</td>
+										<td>happy-outline</td>
+									</tr>
+									<tr>
+										<td>
+											<Button
+												type="button"
+												class="mr-1"
+												icon="chatbox-ellipses-outline"
+											/>
+										</td>
+										<td>chatbox-ellipses-outline</td>
+									</tr>
+									<tr>
+										<td>
+											<Button
+												type="button"
+												class="mr-1"
+												icon="images-outline"
+											/>
+										</td>
+										<td>images-outline</td>
+									</tr>
+									<tr>
+										<td>
+											<Button
+												type="button"
+												class="mr-1"
+												icon="chevron-back-outline"
+											/>
+										</td>
+										<td>chevron-back-outline</td>
+									</tr>
+									<tr>
+										<td>
+											<Button
+												type="button"
+												class="mr-1"
+												icon="chevron-forward-outline"
+											/>
+										</td>
+										<td>chevron-forward-outline</td>
+									</tr>
+									<tr>
+										<td>
+											<Button
+												type="button"
+												class="mr-1"
+												icon="chevron-up-outline"
+											/>
+										</td>
+										<td>chevron-up-outline</td>
+									</tr>
+									<tr>
+										<td>
+											<Button
+												type="button"
+												class="mr-1"
+												icon="chevron-down-outline"
+											/>
+										</td>
+										<td>chevron-down-outline</td>
+									</tr>
 								</tbody>
 							</table>
 						</div>

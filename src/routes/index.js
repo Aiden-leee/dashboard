@@ -15,6 +15,11 @@ const router = new VueRouter({
 		{
 			path: '/login',
 			component: () => import('@/views/auth/LoginPage.vue'),
+			beforeEnter: (to, from, next) => {
+				if (store.getters.isLogin) {
+					next('/dashboard');
+				}
+			},
 		},
 		{
 			path: '/signup',
@@ -47,7 +52,7 @@ const router = new VueRouter({
 		{
 			path: '/formTable',
 			name: 'FormTable',
-			component: () => import('@/views/formTable/TablePage.vue'),
+			component: emptyComponent,
 			children: [
 				{
 					path: 'table',

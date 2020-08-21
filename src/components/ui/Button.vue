@@ -4,7 +4,6 @@
 		class="ui-btn"
 		:class="[icon ? 'icon-btn' : '', getMode]"
 	>
-		<!-- <ion-icon :name=""></ion-icon> -->
 		<template v-if="icon">
 			<ion-icon
 				:name="icon"
@@ -55,9 +54,6 @@ export default {
 		getMode() {
 			return this.mode ? 'btn-' + this.mode : '';
 		},
-	},
-	mounted() {
-		//	console.log(this.mode);
 	},
 };
 </script>

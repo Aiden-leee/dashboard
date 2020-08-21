@@ -41,12 +41,17 @@ export default {
 					children: [
 						{
 							path: '/button',
-							title: 'button',
+							title: 'Button',
 							name: 'Component',
 						},
 						{
 							path: '/tab',
 							title: 'Tab',
+							name: 'Component',
+						},
+						{
+							path: '/input',
+							title: 'Input',
 							name: 'Component',
 						},
 					],
@@ -63,6 +68,13 @@ export default {
 							name: 'FormTable',
 						},
 					],
+				},
+				{
+					path: '/chart',
+					title: 'Chart',
+					name: 'Chart',
+					icon: 'stats-chart-outline',
+					children: null,
 				},
 			],
 		};

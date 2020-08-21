@@ -32,7 +32,7 @@
 }
 
 .mt-0 {
-  margin-top: 0;
+  margin-top: 0 !important;
 }
 
 .mb-1 {
@@ -52,7 +52,7 @@
 }
 
 .mb-0 {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
 }
 
 .ml-1 {
@@ -169,6 +169,11 @@ img {
 
 button:focus {
   outline: none;
+}
+
+input:focus,
+input:active {
+  outline: 0;
 }
 
 body {
@@ -955,26 +960,10 @@ body {
   }
 }
 
-.ui-input-group {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-}
-
-.ui-input-group input[type='text'], .ui-input-group input[type='email'], .ui-input-group input[type='password'] {
-  display: block;
-  width: 100%;
-  border: 1px solid #ced4da;
-  border-radius: 5px;
-  background-color: #f4f7fa;
-  padding: 10px 20px;
-  color: #495057;
-}
-
 .ui-btn {
   display: inline-block;
-  padding: 10px 20px;
+  min-width: 30px;
+  padding: 10px;
   font-size: 14px;
   border: 1px solid transparent;
   background: #ccc;
@@ -1012,49 +1001,41 @@ body {
 .ui-btn.btn-primary {
   color: #fff;
   background: #04a9f5;
-  border: 1px solid #04a9f5;
 }
 
 .ui-btn.btn-secondary {
   color: #fff;
   background: #ec9b68;
-  border: 1px solid #ec9b68;
 }
 
 .ui-btn.btn-info {
   color: #fff;
   background: #5ad4c9;
-  border: 1px solid #5ad4c9;
 }
 
 .ui-btn.btn-success {
   color: #fff;
   background: #6681ea;
-  border: 1px solid #6681ea;
 }
 
 .ui-btn.btn-warning {
   color: #fff;
   background: #e85b81;
-  border: 1px solid #e85b81;
 }
 
 .ui-btn.btn-error {
   color: #fff;
   background: #eabb2d;
-  border: 1px solid #eabb2d;
 }
 
 .ui-btn.btn-light {
   color: #888;
   background: #dadada;
-  border: 1px solid #dadada;
 }
 
 .ui-btn.btn-dark {
   color: #fff;
   background: #3f4d66;
-  border: 1px solid #3f4d66;
 }
 
 .ui-table {
@@ -1205,4 +1186,305 @@ body {
 
 .ui-tab > .tab_content .title {
   font-size: 18px;
+}
+
+.ui-radio {
+  display: inline-block;
+}
+
+.ui-radio > input[type='radio'] {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.ui-radio > input[type='radio'] + label {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  padding: 10px 10px 10px 30px;
+}
+
+.ui-radio > input[type='radio'] + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #f7f7f7;
+  border: 1px solid #d9d9d9;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.ui-radio > input[type='radio'] + label:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.ui-radio > input[type='radio'] + label span {
+  display: inline-block;
+}
+
+.ui-radio > input[type='radio']:hover + label:before {
+  border: 1px solid #999;
+}
+
+.ui-radio > input[type='radio']:checked + label:before {
+  border: 1px solid #84d8d1;
+}
+
+.ui-radio > input[type='radio']:checked + label:after {
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  background: #84d8d1;
+}
+
+.ui-checkbox > input {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.ui-checkbox > input + label {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  padding: 10px 10px 10px 30px;
+}
+
+.ui-checkbox > input + label:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  border-radius: 5px;
+  border: 1px solid #d9d9d9;
+}
+
+.ui-checkbox > input + label:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 6px;
+  width: 8px;
+  height: 8px;
+  margin-top: -4px;
+  -webkit-transform-origin: 50%;
+          transform-origin: 50%;
+  -webkit-transform: rotate(-45deg) scale(0);
+          transform: rotate(-45deg) scale(0);
+  -webkit-transition: none;
+  transition: none;
+}
+
+.ui-checkbox > input:hover + label:before {
+  border: 1px solid #999;
+}
+
+.ui-checkbox > input:checked + label:before {
+  border: 1px solid #84d8d1;
+}
+
+.ui-checkbox > input:checked + label:after {
+  background-color: transparent;
+  top: 50%;
+  left: 5px;
+  width: 11px;
+  height: 7px;
+  margin-top: -5px;
+  border-style: solid;
+  border-color: #84d8d1;
+  border-width: 0 0 3px 3px;
+  -webkit-transform: rotate(-45deg) scale(1);
+          transform: rotate(-45deg) scale(1);
+  -webkit-transition: -webkit-transform 0.2s ease-out;
+  transition: -webkit-transform 0.2s ease-out;
+  transition: transform 0.2s ease-out;
+  transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
+}
+
+.ui-input {
+  display: inline-block;
+  width: 100%;
+}
+
+.ui-input input[type='text'], .ui-input input[type='email'], .ui-input input[type='password'] {
+  display: block;
+  width: 100%;
+  border: 1px solid #d9d9d9;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 10px 20px;
+  color: #495057;
+}
+
+.ui-input input[type='text']::-webkit-input-placeholder, .ui-input input[type='email']::-webkit-input-placeholder, .ui-input input[type='password']::-webkit-input-placeholder {
+  color: #90959a;
+}
+
+.ui-input input[type='text']:-ms-input-placeholder, .ui-input input[type='email']:-ms-input-placeholder, .ui-input input[type='password']:-ms-input-placeholder {
+  color: #90959a;
+}
+
+.ui-input input[type='text']::-ms-input-placeholder, .ui-input input[type='email']::-ms-input-placeholder, .ui-input input[type='password']::-ms-input-placeholder {
+  color: #90959a;
+}
+
+.ui-input input[type='text']::placeholder, .ui-input input[type='email']::placeholder, .ui-input input[type='password']::placeholder {
+  color: #90959a;
+}
+
+.ui-input input[type='text']:focus, .ui-input input[type='email']:focus, .ui-input input[type='password']:focus {
+  border: 1px solid #6f8bbb;
+}
+
+.ui-input-combine {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.ui-input-combine > .ui-input input {
+  padding: 10px 60px 10px 20px;
+}
+
+.ui-input-combine > .ui-btn {
+  position: absolute;
+  right: 0;
+}
+
+.ui-switch {
+  display: inline-block;
+}
+
+.ui-switch.basic > input[type="checkbox"] + label {
+  width: 50px;
+}
+
+.ui-switch.basic > input[type="checkbox"] + label:before {
+  content: "";
+}
+
+.ui-switch.basic > input[type="checkbox"] + label:after {
+  content: "";
+}
+
+.ui-switch.basic > input[type="checkbox"]:checked + label > .round {
+  -webkit-transform: translate(27px, -50%);
+          transform: translate(27px, -50%);
+}
+
+.ui-switch > .text {
+  display: inline-block;
+  margin-right: 5px;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+.ui-switch > input[type="checkbox"] {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.ui-switch > input[type="checkbox"] + label {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  width: 60px;
+  height: 26px;
+  border-radius: 25px;
+  background: #d9d9d9;
+  margin: 0 2px;
+}
+
+.ui-switch > input[type="checkbox"] + label:before, .ui-switch > input[type="checkbox"] + label:after {
+  position: absolute;
+  color: #fff;
+}
+
+.ui-switch > input[type="checkbox"] + label:before {
+  content: "OFF";
+  top: 6px;
+  right: 6px;
+}
+
+.ui-switch > input[type="checkbox"] + label:after {
+  content: "ON";
+  display: none;
+  top: 6px;
+  left: 10px;
+}
+
+.ui-switch > input[type="checkbox"] + label > .round {
+  position: absolute;
+  display: block;
+  width: 18px;
+  height: 18px;
+  top: 50%;
+  -webkit-transform: translate(4px, -50%);
+          transform: translate(4px, -50%);
+  border-radius: 50%;
+  background: #fff;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.ui-switch > input[type="checkbox"]:checked + label {
+  background: #84d8d1;
+}
+
+.ui-switch > input[type="checkbox"]:checked + label:before {
+  display: none;
+}
+
+.ui-switch > input[type="checkbox"]:checked + label:after {
+  display: block;
+}
+
+.ui-switch > input[type="checkbox"]:checked + label > .round {
+  background: #f5f5f5;
+  -webkit-transform: translate(36px, -50%);
+          transform: translate(36px, -50%);
 }

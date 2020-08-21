@@ -46,7 +46,7 @@ $uiBorderColor: #e5e5e5;
     margin-top: 40px;
 }
 .mt-0 {
-    margin-top: 0;
+    margin-top: 0 !important;
 }
 // margin bottom
 .mb-1 {
@@ -62,7 +62,7 @@ $uiBorderColor: #e5e5e5;
     margin-bottom: 40px;
 }
 .mb-0 {
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
 }
 
 // margin left

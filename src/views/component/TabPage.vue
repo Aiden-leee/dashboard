@@ -35,7 +35,7 @@
 					</div>
 					<div class="card_body">
 						<div class="wrap">
-							<Tabs :color="'#ccc'">
+							<Tabs :color="'#7189e4'">
 								<Tab name="Tab1" :active="true">
 									<h3 class="title mb-1">First Tab Content</h3>
 									<p>Tabs Component 1</p>
@@ -62,7 +62,7 @@
 					</div>
 					<div class="card_body">
 						<div class="wrap">
-							<Tabs>
+							<Tabs :color="'#ef7171'">
 								<Tab name="Tab1" :active="true">
 									<h3 class="title mb-1">First Tab Content</h3>
 									<p>Tabs Component 1</p>

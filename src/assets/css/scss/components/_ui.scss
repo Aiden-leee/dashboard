@@ -1,20 +1,7 @@
-.ui-input-group {
-    display: flex;
-    width: 100%;
-    input[type='text'], input[type='email'], input[type='password'] {
-        display: block;
-        width: 100%;
-        border: 1px solid #ced4da;
-        border-radius: $cpRadius;
-        background-color: #f4f7fa;
-        padding: 10px 20px;
-        color: #495057;
-    }
-}
-
 .ui-btn{
     display: inline-block;
-    padding: 10px 20px;
+    min-width: 30px;
+    padding: 10px;
     font-size: 14px;
     border: 1px solid transparent;
     background: #ccc;
@@ -44,42 +31,42 @@
     &.btn-primary{
         color: #fff;
         background: #04a9f5;
-        border: 1px solid #04a9f5;
+        // border: 1px solid #04a9f5;
     }
     &.btn-secondary{
         color: #fff;
         background: #ec9b68;
-        border: 1px solid #ec9b68;
+        // border: 1px solid #ec9b68;
     }
     &.btn-info{
         color: #fff;
         background: #5ad4c9;
-        border: 1px solid #5ad4c9;
+        // border: 1px solid #5ad4c9;
     }
     &.btn-success{
         color: #fff;
         background: #6681ea;
-        border: 1px solid #6681ea;
+        // border: 1px solid #6681ea;
     }
     &.btn-warning{
         color: #fff;
         background: #e85b81;
-        border: 1px solid #e85b81;
+        // border: 1px solid #e85b81;
     }
     &.btn-error{
         color: #fff;
         background: #eabb2d;
-        border: 1px solid #eabb2d;
+        // border: 1px solid #eabb2d;
     }
     &.btn-light{
         color: $defaultColor;
         background: #dadada;
-        border: 1px solid #dadada;
+        // border: 1px solid #dadada;
     }
     &.btn-dark{
         color: #fff;
         background: #3f4d66;
-        border: 1px solid #3f4d66;
+        // border: 1px solid #3f4d66;
     }
 
     
@@ -239,6 +226,241 @@
         min-height: 150px;
         .title {
             font-size: 18px;
+        }
+    }
+}
+
+.ui-radio{
+    display: inline-block;
+    > input[type='radio'] {
+        @include ui_input;
+
+        & + label {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+            padding: 10px 10px 10px 30px;
+
+            $radioSize: 20px;
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                display: inline-block;
+                width: $radioSize;
+                height: $radioSize;
+                border-radius: 50%;
+                background: #f7f7f7;
+                border: 1px solid #d9d9d9;
+                transition: all 0.2s linear;
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                left: 0;
+                display: inline-block;
+                width: $radioSize;
+                height: $radioSize;
+                border-radius: 50%;
+                transform: scale(0);
+                transition: all 0.2s linear;
+            }
+            span{
+                display: inline-block;
+            }
+        }
+        &:hover + label{
+            &:before {
+                border: 1px solid #999;
+            }
+        }
+        &:checked + label {
+            &:before {
+                border: 1px solid $pointColor;
+            }
+            &:after {
+                transform: scale(0.5);
+                background: $pointColor;
+            }
+        }
+        
+    }
+}
+
+.ui-checkbox {
+    > input {
+        @include ui_input;
+        & + label {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+            padding: 10px 10px 10px 30px;
+
+            &:before {
+                content: '';
+                position: absolute;
+                display: block;
+                width: 20px;
+                height: 20px;
+                left: 0;
+                border-radius: $cpRadius;
+                border: 1px solid #d9d9d9;
+
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                display: block;
+                top: 50%;
+                left: 6px;
+                width: 8px;
+                height: 8px;
+                margin-top: -4px;
+                transform-origin: 50%;
+                transform: rotate(-45deg) scale(0);
+                transition: none;
+            }
+        }
+        &:hover + label {
+            &:before {
+                border: 1px solid #999;
+            }
+        }
+        &:checked + label {
+            &:before {
+                border: 1px solid $pointColor;
+            }
+            &:after {
+                background-color: transparent;
+                top: 50%;
+                left: 5px;
+                width: 11px;
+                height: 7px;
+                margin-top: -5px;
+                border-style: solid;
+                border-color: $pointColor;
+                border-width: 0 0 3px 3px;
+                transform: rotate(-45deg) scale(1);
+                transition: transform 0.2s ease-out;
+            }
+        }
+    }
+}
+
+.ui-input {
+    display: inline-block;
+    width: 100%;
+    input[type='text'], input[type='email'], input[type='password'] {
+        display: block;
+        width: 100%;
+        border: 1px solid #d9d9d9;
+        border-radius: $cpRadius;
+        background-color: #fff;
+        padding: 10px 20px;
+        color: #495057;
+        &::placeholder {
+            color: #90959a;
+        }
+        &:focus{
+            border: 1px solid #6f8bbb;
+
+        }
+    }
+}
+
+.ui-input-combine {
+    display: flex;
+    position: relative;
+    > .ui-input {
+        input {
+
+            padding: 10px 60px 10px 20px;
+        }
+    }
+    > .ui-btn {
+        position: absolute;
+        right: 0;
+    }
+}
+
+.ui-switch {
+    display: inline-block;
+    &.basic {
+        > input[type="checkbox"]{
+            & + label {
+                width: 50px;
+                &:before {
+                    content: "";
+                }
+                &:after {
+                    content: "";
+                }
+            }
+            &:checked + label {
+                > .round {
+                    transform: translate(27px, -50%);
+                }
+            }
+        }
+    }
+    > .text {
+        display: inline-block;
+        margin-right: 5px;
+        transform: translate(0, -50%);
+    }
+    > input[type="checkbox"] {
+        @include ui_input;
+        & + label {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            width: 60px;
+            height: 26px;
+            border-radius: 25px;
+            background: #d9d9d9;
+            margin: 0 2px;
+            &:before, &:after {
+                position: absolute;
+                color: #fff;
+            }
+            &:before {
+                content: "OFF";
+                top: 6px;
+                right: 6px;
+            }
+            &:after {
+                content: "ON";
+                display: none;
+                top: 6px;
+                left: 10px;
+            }
+            > .round {
+                position: absolute; 
+                display: block;
+                width: 18px;
+                height: 18px;
+                top: 50%;
+                transform: translate(4px, -50%);
+                border-radius: 50%;
+                background: #fff;
+                transition: all 0.2s ease-out;
+            }
+        }
+        &:checked + label {
+            background: $pointColor;
+            
+            &:before {
+                display: none;
+            }
+            &:after {
+                display: block;
+            }
+            > .round {
+                background: #f5f5f5;
+                transform: translate(36px, -50%);
+            }
         }
     }
 }

@@ -47,7 +47,7 @@ export default {
 			deleteCookie('til_auth');
 			deleteCookie('til_user');
 			deleteCookie('til_nickname');
-			this.$router.push('/login');
+			this.$router.push('/');
 		},
 
 		handleMobileMenu() {

@@ -2,7 +2,15 @@
 	<div class="content_body text-center">
 		<form @submit.prevent="submitForm">
 			<h3 class="mb-2">LOGIN</h3>
-			<div class="ui-input-group mb-1">
+			<Input
+				type="email"
+				id="username"
+				placeholder="Email"
+				v-model="username"
+				color="#f4f7fa"
+				class="mb-1"
+			/>
+			<!-- <div class="ui-input-group mb-1">
 				<label for="username"></label>
 				<input
 					type="email"
@@ -10,8 +18,8 @@
 					id="username"
 					v-model="username"
 				/>
-			</div>
-			<div class="ui-input-group mb-2">
+			</div> -->
+			<!-- <div class="ui-input-group mb-2">
 				<label for="password"></label>
 				<input
 					type="password"
@@ -19,7 +27,15 @@
 					id="password"
 					v-model="password"
 				/>
-			</div>
+			</div> -->
+			<Input
+				type="password"
+				id="password"
+				placeholder="Password"
+				v-model="password"
+				color="#f4f7fa"
+				class="mb-2"
+			/>
 			<button
 				type="submit"
 				class="ui-btn btn-primary"
@@ -36,12 +52,16 @@
 </template>
 
 <script>
+import Input from '@/components/ui/Input.vue';
 export default {
 	data() {
 		return {
 			username: '',
 			password: '',
 		};
+	},
+	components: {
+		Input,
 	},
 	methods: {
 		async submitForm() {

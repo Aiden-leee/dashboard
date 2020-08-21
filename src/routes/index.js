@@ -15,11 +15,6 @@ const router = new VueRouter({
 		{
 			path: '/login',
 			component: () => import('@/views/auth/LoginPage.vue'),
-			beforeEnter: (to, from, next) => {
-				if (store.getters.isLogin) {
-					next('/dashboard');
-				}
-			},
 		},
 		{
 			path: '/signup',
@@ -46,6 +41,11 @@ const router = new VueRouter({
 					name: 'Component',
 					component: () => import('@/views/component/TabPage.vue'),
 				},
+				{
+					path: 'Input',
+					name: 'Component',
+					component: () => import('@/views/component/InputPage.vue'),
+				},
 			],
 			meta: { auth: true },
 		},
@@ -63,6 +63,11 @@ const router = new VueRouter({
 			meta: { auth: true },
 		},
 		{
+			path: '/chart',
+			component: () => import('@/views/chart/ChartPage.vue'),
+			meta: { auth: true },
+		},
+		{
 			path: '*',
 			component: () => import('@/views/except/404.vue'),
 		},
@@ -70,6 +75,10 @@ const router = new VueRouter({
 });
 
 router.beforeEach((to, from, next) => {
+	if (store.getters.isLogin && to.path === '/login') {
+		next('/dashboard');
+		return;
+	}
 	if (to.meta.auth && !store.getters.isLogin) {
 		next('/login');
 		return;

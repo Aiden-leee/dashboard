@@ -2,7 +2,31 @@
 	<div class="content_body text-center">
 		<form @submit.prevent="submitForm">
 			<h3 class="mb-2">Signup</h3>
-			<div class="ui-input-group mb-1">
+			<Input
+				type="email"
+				id="username"
+				placeholder="Email"
+				v-model="username"
+				color="#f4f7fa"
+				class="mb-1"
+			/>
+			<Input
+				type="text"
+				id="nickname"
+				placeholder="Nickname"
+				v-model="nickname"
+				color="#f4f7fa"
+				class="mb-1"
+			/>
+			<Input
+				type="password"
+				id="password"
+				placeholder="Password"
+				v-model="password"
+				color="#f4f7fa"
+				class="mb-1"
+			/>
+			<!-- <div class="ui-input-group mb-1">
 				<label for="username"></label>
 				<input
 					type="email"
@@ -10,8 +34,8 @@
 					id="username"
 					v-model="username"
 				/>
-			</div>
-			<div class="ui-input-group mb-1">
+			</div> -->
+			<!-- <div class="ui-input-group mb-1">
 				<label for="nickname"></label>
 				<input
 					type="text"
@@ -28,7 +52,7 @@
 					id="password"
 					v-model="password"
 				/>
-			</div>
+			</div> -->
 
 			<button
 				type="submit"
@@ -46,6 +70,7 @@
 </template>
 
 <script>
+import Input from '@/components/ui/Input.vue';
 import { registerUser } from '@/api/auth';
 import { validateEmail } from '@/utils/validation';
 export default {
@@ -55,6 +80,9 @@ export default {
 			nickname: '',
 			password: '',
 		};
+	},
+	components: {
+		Input,
 	},
 	computed: {
 		isEmailValid() {

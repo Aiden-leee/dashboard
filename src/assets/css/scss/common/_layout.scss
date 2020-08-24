@@ -75,7 +75,7 @@ body{
                     &.expanded + .sub_menu,
                     &.active + .sub_menu{
                         display: block;
-                        max-height: 10em;
+                        max-height: 15em;
                     }
                 }
                 .ion{
@@ -99,6 +99,11 @@ body{
                                 display: block;
                                 padding: 15px 0 15px 60px;
                             }
+                            &:hover {
+                                > a{
+                                    color: $navActive;
+                                }
+                            }
                         }
                     }
                 }
@@ -113,8 +118,6 @@ body{
     visibility: visible;
     // font-size: 30px;
 }
-
-
 
 // page content
 .page{
@@ -154,7 +157,7 @@ body{
             }
             .nickname{
                 display: inline-block;
-                color: #000;
+                color: $navColor;
                 margin-right: 10px;
             }
         }   

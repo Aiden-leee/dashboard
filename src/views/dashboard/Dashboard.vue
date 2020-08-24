@@ -1,7 +1,5 @@
 <template>
 	<div>
-		<!-- <Layout>
-		<template v-slot:content> -->
 		<div class="row">
 			<div class="col col-1">
 				<div class="card">
@@ -84,7 +82,7 @@
 						<h4>Residence</h4>
 					</div>
 					<div class="card_body">
-						<Map></Map>
+						<Map address="경기 김포시 풍무로69번길 51"></Map>
 					</div>
 				</div>
 			</div>
@@ -99,8 +97,6 @@
 				</div>
 			</div>
 		</div>
-		<!-- </template>
-	</Layout> -->
 	</div>
 </template>
 

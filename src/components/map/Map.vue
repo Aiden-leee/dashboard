@@ -6,6 +6,12 @@
 
 <script>
 export default {
+	props: {
+		address: {
+			type: String,
+			default: '경기 김포시 풍무로69번길 51',
+		},
+	},
 	mounted() {
 		window.kakao && window.kakao.maps ? this.initMap() : '';
 	},
@@ -23,10 +29,7 @@ export default {
 			var geocoder = new window.kakao.maps.services.Geocoder();
 
 			// 주소로 좌표를 검색합니다
-			geocoder.addressSearch('경기 김포시 풍무로69번길 51', function(
-				result,
-				status,
-			) {
+			geocoder.addressSearch(`${this.address}`, function(result, status) {
 				// 정상적으로 검색이 완료됐으면
 				if (status === window.kakao.maps.services.Status.OK) {
 					var coords = new window.kakao.maps.LatLng(result[0].y, result[0].x);

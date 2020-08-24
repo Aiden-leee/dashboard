@@ -1,15 +1,15 @@
 <template>
-	<div class="ui-input">
-		<input
-			:type="type"
+	<div class="ui-textarea">
+		<textarea
 			:id="id"
-			:style="{ background: color }"
-			:placeholder="placeholder"
+			:name="name"
+			:cols="cols"
+			:rows="rows"
 			:value="value"
+			:placeholder="placeholder"
 			:disabled="disabled"
 			@input="updateInput"
-		/>
-		<label :for="id"></label>
+		></textarea>
 	</div>
 </template>
 
@@ -20,20 +20,23 @@ export default {
 			type: String,
 			required: true,
 		},
-		type: {
+		name: {
 			type: String,
-			default: 'text',
+			required: true,
+		},
+		cols: {
+			type: Number,
+			default: 30,
+		},
+		rows: {
+			type: Number,
+			default: 10,
+		},
+		value: {
+			type: String,
 		},
 		placeholder: {
 			type: String,
-			required: false,
-		},
-		color: {
-			type: String,
-			required: false,
-		},
-		value: {
-			type: null,
 		},
 		disabled: {
 			type: null,

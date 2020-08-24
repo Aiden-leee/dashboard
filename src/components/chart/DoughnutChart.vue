@@ -25,47 +25,33 @@ export default {
 			default: '200',
 		},
 	},
-	created() {},
 	mounted() {
 		this.createChart();
 	},
 	methods: {
 		createChart() {
-			let _this = this;
+			const _this = this;
 			let ctx = _this.id;
 			new Chart(ctx, {
-				type: 'horizontalBar',
-				maintainAspectRatio: false, // chart_wrap의 크기에 맞게 사이즈 조절
-				data: _this.chartData.data,
+				type: 'doughnut',
+				data: _this.chartData.data, // chart_wrap의 크기에 맞게 사이즈 조절
 				options: {
 					responsive: true,
 					maintainAspectRatio: false,
-					scales: {
-						yAxes: [
-							{
-								ticks: {
-									beginAtZero: true,
-								},
-							},
-						],
-						xAxes: [
-							{
-								ticks: {
-									min: 0,
-									max: 100,
-								},
-							},
-						],
-					},
+					cutoutPercentage: 60,
 					title: {
 						display: _this.title ? true : '',
 						text: _this.title,
 					},
 					legend: {
-						display: false,
+						position: 'top',
 						labels: {
 							boxWidth: 15,
 						},
+					},
+					animation: {
+						animateScale: true,
+						animateRotate: false,
 					},
 				},
 			});

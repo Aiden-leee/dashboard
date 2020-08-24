@@ -10,6 +10,7 @@
 			:value="val"
 			@change="updateCheck"
 			:checked="checked"
+			:disabled="disabled"
 		/>
 		<label :for="id"><span class="round"></span></label>
 	</div>
@@ -46,6 +47,9 @@ export default {
 		},
 		checked: {
 			type: Boolean,
+		},
+		disabled: {
+			type: null,
 		},
 	},
 	methods: {

@@ -8,7 +8,7 @@
 					</div>
 					<div class="card_body">
 						<div class="wrap">
-							<Tabs>
+							<Tabs :tabIndex.sync="tabIndex1">
 								<Tab name="Tab1" :active="true">
 									<h3 class="title mb-1">First Tab Content</h3>
 									<p>Tabs Component 1</p>
@@ -35,7 +35,7 @@
 					</div>
 					<div class="card_body">
 						<div class="wrap">
-							<Tabs :color="'#7189e4'">
+							<Tabs :color="'#7189e4'" :tabIndex.sync="tabIndex2">
 								<Tab name="Tab1" :active="true">
 									<h3 class="title mb-1">First Tab Content</h3>
 									<p>Tabs Component 1</p>
@@ -62,7 +62,7 @@
 					</div>
 					<div class="card_body">
 						<div class="wrap">
-							<Tabs :color="'#ef7171'">
+							<Tabs :color="'#ef7171'" :tabIndex.sync="tabIndex3">
 								<Tab name="Tab1" :active="true">
 									<h3 class="title mb-1">First Tab Content</h3>
 									<p>Tabs Component 1</p>
@@ -88,7 +88,11 @@
 import { Tabs, Tab } from '@/components/ui/tabs/';
 export default {
 	data() {
-		return {};
+		return {
+			tabIndex1: 0,
+			tabIndex2: 0,
+			tabIndex3: 0,
+		};
 	},
 	components: {
 		Tabs,

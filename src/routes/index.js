@@ -42,24 +42,22 @@ const router = new VueRouter({
 					component: () => import('@/views/component/TabPage.vue'),
 				},
 				{
-					path: 'Input',
+					path: 'input',
 					name: 'Component',
 					component: () => import('@/views/component/InputPage.vue'),
+				},
+				{
+					path: 'table',
+					name: 'Component',
+					component: () => import('@/views/component/TablePage.vue'),
 				},
 			],
 			meta: { auth: true },
 		},
 		{
-			path: '/formTable',
-			name: 'FormTable',
-			component: emptyComponent,
-			children: [
-				{
-					path: 'table',
-					name: 'FormTable',
-					component: () => import('@/views/formTable/TablePage.vue'),
-				},
-			],
+			path: '/map',
+			name: 'Map',
+			component: () => import('@/views/map/MapPage.vue'),
 			meta: { auth: true },
 		},
 		{

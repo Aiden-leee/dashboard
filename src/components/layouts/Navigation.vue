@@ -54,20 +54,19 @@ export default {
 							title: 'Input',
 							name: 'Component',
 						},
-					],
-				},
-				{
-					path: '/formTable',
-					title: 'Form & Table',
-					name: 'FormTable',
-					icon: 'document-text-outline',
-					children: [
 						{
 							path: '/table',
 							title: 'Table',
-							name: 'FormTable',
+							name: 'Component',
 						},
 					],
+				},
+				{
+					path: '/map',
+					title: 'Map',
+					name: 'Map',
+					icon: 'map-outline',
+					children: null,
 				},
 				{
 					path: '/chart',

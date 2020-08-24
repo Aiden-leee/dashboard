@@ -7,6 +7,7 @@
 			:name="name"
 			:value="val"
 			:checked="state"
+			:disabled="disabled"
 			@change="updateCheckbox"
 		/>
 		<label :for="id"
@@ -44,6 +45,9 @@ export default {
 		checked: {
 			type: Boolean,
 			default: false,
+		},
+		disabled: {
+			type: null,
 		},
 		checkModel: {
 			type: null,

@@ -280,7 +280,7 @@ body {
 .navigation .navigation_body > ul > li > a.expanded + .sub_menu,
 .navigation .navigation_body > ul > li > a.active + .sub_menu {
   display: block;
-  max-height: 10em;
+  max-height: 15em;
 }
 
 .navigation .navigation_body > ul > li .ion {
@@ -307,6 +307,10 @@ body {
 .navigation .navigation_body > ul > li > .sub_menu > ul > li > a {
   display: block;
   padding: 15px 0 15px 60px;
+}
+
+.navigation .navigation_body > ul > li > .sub_menu > ul > li:hover > a {
+  color: #86ffff;
 }
 
 .ion {
@@ -372,7 +376,7 @@ body {
 
 .page > .content > header .nickname {
   display: inline-block;
-  color: #000;
+  color: #3f4d66;
   margin-right: 10px;
 }
 
@@ -986,7 +990,7 @@ body {
   cursor: pointer;
 }
 
-.ui-btn:hover {
+.ui-btn:not(:disabled):hover {
   -webkit-filter: brightness(1.1);
           filter: brightness(1.1);
 }
@@ -1224,7 +1228,7 @@ body {
   height: 20px;
   border-radius: 50%;
   background: #f7f7f7;
-  border: 1px solid #d9d9d9;
+  border: 1px solid #e5e5e5;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
@@ -1247,7 +1251,12 @@ body {
   display: inline-block;
 }
 
-.ui-radio > input[type='radio']:hover + label:before {
+.ui-radio > input[type='radio']:disabled + label {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.ui-radio > input[type='radio']:not(:disabled):hover + label:before {
   border: 1px solid #999;
 }
 
@@ -1292,7 +1301,7 @@ body {
   height: 20px;
   left: 0;
   border-radius: 5px;
-  border: 1px solid #d9d9d9;
+  border: 1px solid #e5e5e5;
 }
 
 .ui-checkbox > input + label:after {
@@ -1312,7 +1321,12 @@ body {
   transition: none;
 }
 
-.ui-checkbox > input:hover + label:before {
+.ui-checkbox > input:disabled + label {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.ui-checkbox > input:not(:disabled):hover + label:before {
   border: 1px solid #999;
 }
 
@@ -1346,11 +1360,16 @@ body {
 .ui-input input[type='text'], .ui-input input[type='email'], .ui-input input[type='password'] {
   display: block;
   width: 100%;
-  border: 1px solid #d9d9d9;
+  border: 1px solid #e5e5e5;
   border-radius: 5px;
   background-color: #fff;
   padding: 10px 20px;
   color: #495057;
+}
+
+.ui-input input[type='text']:disabled, .ui-input input[type='email']:disabled, .ui-input input[type='password']:disabled {
+  opacity: 0.4;
+  pointer-events: none;
 }
 
 .ui-input input[type='text']::-webkit-input-placeholder, .ui-input input[type='email']::-webkit-input-placeholder, .ui-input input[type='password']::-webkit-input-placeholder {
@@ -1369,7 +1388,7 @@ body {
   color: #90959a;
 }
 
-.ui-input input[type='text']:focus, .ui-input input[type='email']:focus, .ui-input input[type='password']:focus {
+.ui-input input[type='text']:not(:disabled):focus, .ui-input input[type='email']:not(:disabled):focus, .ui-input input[type='password']:not(:disabled):focus {
   border: 1px solid #6f8bbb;
 }
 
@@ -1405,7 +1424,12 @@ body {
   content: "";
 }
 
-.ui-switch.basic > input[type="checkbox"]:checked + label > .round {
+.ui-switch.basic > input[type="checkbox"]:disabled + label {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.ui-switch.basic > input[type="checkbox"]:not(:disabled):checked + label > .round {
   -webkit-transform: translate(27px, -50%);
           transform: translate(27px, -50%);
 }
@@ -1435,7 +1459,7 @@ body {
   width: 60px;
   height: 26px;
   border-radius: 25px;
-  background: #d9d9d9;
+  background: #e5e5e5;
   margin: 0 2px;
 }
 
@@ -1487,4 +1511,37 @@ body {
   background: #f5f5f5;
   -webkit-transform: translate(36px, -50%);
           transform: translate(36px, -50%);
+}
+
+.ui-textarea > textarea {
+  width: 100%;
+  padding: 10px 20px;
+  border: 1px solid #e5e5e5;
+  height: auto;
+}
+
+.ui-textarea > textarea:disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.ui-textarea > textarea::-webkit-input-placeholder {
+  color: #90959a;
+}
+
+.ui-textarea > textarea:-ms-input-placeholder {
+  color: #90959a;
+}
+
+.ui-textarea > textarea::-ms-input-placeholder {
+  color: #90959a;
+}
+
+.ui-textarea > textarea::placeholder {
+  color: #90959a;
+}
+
+.ui-textarea > textarea:focus {
+  outline: 0;
+  border: 1px solid #6f8bbb;
 }

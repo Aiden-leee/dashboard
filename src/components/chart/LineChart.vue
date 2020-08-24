@@ -25,18 +25,16 @@ export default {
 			default: '200',
 		},
 	},
-	created() {},
 	mounted() {
 		this.createChart();
 	},
 	methods: {
 		createChart() {
-			let _this = this;
+			const _this = this;
 			let ctx = _this.id;
 			new Chart(ctx, {
-				type: 'horizontalBar',
-				maintainAspectRatio: false, // chart_wrap의 크기에 맞게 사이즈 조절
-				data: _this.chartData.data,
+				type: 'line',
+				data: _this.chartData.data, // chart_wrap의 크기에 맞게 사이즈 조절
 				options: {
 					responsive: true,
 					maintainAspectRatio: false,
@@ -62,7 +60,7 @@ export default {
 						text: _this.title,
 					},
 					legend: {
-						display: false,
+						position: 'top',
 						labels: {
 							boxWidth: 15,
 						},

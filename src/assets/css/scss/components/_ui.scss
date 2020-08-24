@@ -18,7 +18,7 @@
     &:not(:disabled){
         cursor: pointer;
     }
-    &:hover {
+    &:not(:disabled):hover {
         filter: brightness(1.1)
     }
     &.icon-btn {
@@ -252,7 +252,7 @@
                 height: $radioSize;
                 border-radius: 50%;
                 background: #f7f7f7;
-                border: 1px solid #d9d9d9;
+                border: 1px solid $uiBorderColor;
                 transition: all 0.2s linear;
             }
             &:after {
@@ -270,7 +270,11 @@
                 display: inline-block;
             }
         }
-        &:hover + label{
+        &:disabled + label {
+            opacity: 0.4;
+            pointer-events: none;
+        }
+        &:not(:disabled):hover + label{
             &:before {
                 border: 1px solid #999;
             }
@@ -306,7 +310,7 @@
                 height: 20px;
                 left: 0;
                 border-radius: $cpRadius;
-                border: 1px solid #d9d9d9;
+                border: 1px solid $uiBorderColor;
 
             }
             &:after {
@@ -323,7 +327,11 @@
                 transition: none;
             }
         }
-        &:hover + label {
+        &:disabled + label {
+            opacity: 0.4;
+            pointer-events: none;
+        }
+        &:not(:disabled):hover + label {
             &:before {
                 border: 1px solid #999;
             }
@@ -355,15 +363,19 @@
     input[type='text'], input[type='email'], input[type='password'] {
         display: block;
         width: 100%;
-        border: 1px solid #d9d9d9;
+        border: 1px solid $uiBorderColor;
         border-radius: $cpRadius;
         background-color: #fff;
         padding: 10px 20px;
         color: #495057;
+        &:disabled {
+            opacity: 0.4;
+            pointer-events: none;
+        }
         &::placeholder {
             color: #90959a;
         }
-        &:focus{
+        &:not(:disabled):focus{
             border: 1px solid #6f8bbb;
 
         }
@@ -398,7 +410,11 @@
                     content: "";
                 }
             }
-            &:checked + label {
+            &:disabled + label{
+                opacity: 0.4;
+                pointer-events: none;
+            }
+            &:not(:disabled):checked + label {
                 > .round {
                     transform: translate(27px, -50%);
                 }
@@ -419,7 +435,7 @@
             width: 60px;
             height: 26px;
             border-radius: 25px;
-            background: #d9d9d9;
+            background: $uiBorderColor;
             margin: 0 2px;
             &:before, &:after {
                 position: absolute;
@@ -461,6 +477,28 @@
                 background: #f5f5f5;
                 transform: translate(36px, -50%);
             }
+        }
+    }
+}
+
+.ui-textarea{
+    > textarea {
+        width: 100%;
+        padding: 10px 20px;
+        border: 1px solid $uiBorderColor;
+        height: auto;
+        
+        &:disabled {
+            opacity: 0.4;
+            pointer-events: none;
+        }
+        &::placeholder {
+            color: #90959a;
+        }
+        &:focus{
+            outline: 0;
+            border: 1px solid #6f8bbb;
+
         }
     }
 }

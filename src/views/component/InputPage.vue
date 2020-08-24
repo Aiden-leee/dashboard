@@ -31,6 +31,7 @@
 								label="Radio03"
 								v-model="radioCheck01"
 								value="test3"
+								disabled="disabled"
 								style="display:block"
 							></Radio>
 						</div>
@@ -64,6 +65,7 @@
 								name="chk1"
 								:val="3"
 								v-model="checkbox01"
+								disabled="disabled"
 								label="checkbox3"
 							></Checkbox>
 						</div>
@@ -88,6 +90,7 @@
 								placeholder="text"
 								color="#f3f7ff"
 								class="mb-1"
+								disabled="disabled"
 								v-model="ipt02"
 							/>
 							<Input
@@ -111,7 +114,7 @@
 				</div>
 			</div>
 			<div class="col col-2">
-				<div class="card">
+				<div class="card" style="height:274px">
 					<div class="card_header">
 						<h4>Switch</h4>
 					</div>
@@ -138,7 +141,37 @@
 								name="onoff3"
 								v-model="switch03"
 								label="True&False"
+								disabled="disabled"
 							></Toggle>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col col-1">
+				<div class="card">
+					<div class="card_header">
+						<h4>Textarea</h4>
+					</div>
+					<div class="card_body">
+						<div class="wrap">
+							<Textarea
+								id="textarea01"
+								name="textarea01"
+								:cols="30"
+								:rows="10"
+								placeholder="text..."
+								v-model="textareaValue"
+								class="mb-1"
+							></Textarea>
+							<Textarea
+								id="textarea02"
+								name="textarea02"
+								:cols="30"
+								:rows="10"
+								placeholder="text..."
+								disabled="disabled"
+								v-model="textareaValue2"
+							></Textarea>
 						</div>
 					</div>
 				</div>
@@ -153,6 +186,7 @@ import Checkbox from '@/components/ui/Checkbox.vue';
 import Input from '@/components/ui/Input.vue';
 import Button from '@/components/ui/Button.vue';
 import Toggle from '@/components/ui/Toggle.vue';
+import Textarea from '@/components/ui/Textarea.vue';
 export default {
 	components: {
 		Radio,
@@ -160,6 +194,7 @@ export default {
 		Input,
 		Button,
 		Toggle,
+		Textarea,
 	},
 	data() {
 		return {
@@ -172,6 +207,8 @@ export default {
 			switch01: false,
 			switch02: false,
 			switch03: false,
+			textareaValue: '',
+			textareaValue2: '',
 		};
 	},
 };

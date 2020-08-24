@@ -29,13 +29,15 @@ export default {
 			type: String,
 			default: '#84d8d1',
 		},
+		tabIndex: {
+			type: Number,
+		},
 	},
 	created() {
 		this.tabs = this.$children;
 	},
 	data() {
 		return {
-			tabIndex: 0,
 			tabs: [],
 		};
 	},
@@ -44,7 +46,7 @@ export default {
 			return idx === this.tabIndex;
 		},
 		handleTab(selected, idx) {
-			this.tabIndex = idx;
+			this.$emit('update:tabIndex', idx);
 			this.tabs.forEach(item => {
 				item.isActive = item.name === selected.name;
 			});

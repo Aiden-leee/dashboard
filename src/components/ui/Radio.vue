@@ -6,6 +6,7 @@
 			:name="name"
 			:checked="state"
 			:value="value"
+			:disabled="disabled"
 			@change="updateInput"
 		/>
 		<label :for="id"
@@ -38,6 +39,9 @@ export default {
 		},
 		checked: {
 			type: Boolean,
+		},
+		disabled: {
+			type: null,
 		},
 		radioModel: {
 			default: null,

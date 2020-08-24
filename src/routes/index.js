@@ -51,6 +51,11 @@ const router = new VueRouter({
 					name: 'Component',
 					component: () => import('@/views/component/TablePage.vue'),
 				},
+				{
+					path: 'popup',
+					name: 'Component',
+					component: () => import('@/views/component/PopupPage.vue'),
+				},
 			],
 			meta: { auth: true },
 		},

@@ -59,6 +59,11 @@ export default {
 							title: 'Table',
 							name: 'Component',
 						},
+						{
+							path: '/popup',
+							title: 'Popup',
+							name: 'Component',
+						},
 					],
 				},
 				{

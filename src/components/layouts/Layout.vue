@@ -1,5 +1,6 @@
 <template>
 	<div class="page">
+		<!-- <div class="popup_wrap"></div> -->
 		<div class="wrapper" :class="isWrapOpen" @click="isOff"></div>
 		<Navigation></Navigation>
 		<div class="content">

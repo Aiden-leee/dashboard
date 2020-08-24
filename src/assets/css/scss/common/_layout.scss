@@ -43,7 +43,7 @@ body{
         color: #fff;
         > ul{
             > li{
-                & > a{
+                > a{
                     position: relative;
                     width: 100%;
                     display: inline-flex;
@@ -52,7 +52,11 @@ body{
                     font-size: 18px;
                     color: $navTextColor;
                     > * {
-                        pointer-events: none;;
+                        pointer-events: none;
+                    }
+                    &:hover {
+                        background: #212b3c;
+                        color: #fff;
                     }
                     & + .sub_menu{
                         max-height: 0;
@@ -60,7 +64,7 @@ body{
                         transition: all 0.3s linear;
                     }
                     &.router-link-active{
-                        background: #212b3c;
+                        background: #7da2a7;
                         color: #fff;
                     }
                     
@@ -118,7 +122,66 @@ body{
     visibility: visible;
     // font-size: 30px;
 }
-
+.popup_wrap {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.4);
+    z-index: 100;
+    &.on {
+        display: block;
+    }
+}
+.ui-popup {
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.4);
+    transition: $layoutTransition;
+    z-index: 101;
+    .wrap {
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        min-height: 250px;
+        transform: translate(132.5px, 0);
+        background: #fff;
+        border-radius: $layoutRadius;
+        overflow: hidden;
+        @media only screen and (max-width: 980px) {
+            transform: translate(0, 0);
+        }
+        .popup_header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 60px;
+            padding: 20px;
+            font-size: 18px;
+            background: $pointColor;
+            // border-radius: 10px 10px 0 0;
+            > h4 {
+                color: #fff;
+            }
+        }
+        .popup_body {
+            flex: 1 1 auto;
+            padding: 20px;
+            
+        }
+        .popup_foot {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            text-align: center;
+        }
+    }
+}
 // page content
 .page{
     .wrapper {

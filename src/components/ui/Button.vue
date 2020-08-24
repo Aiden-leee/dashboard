@@ -3,6 +3,8 @@
 		:type="type"
 		class="ui-btn"
 		:class="[icon ? 'icon-btn' : '', getMode]"
+		:style="{ background: bg, color: color }"
+		@click="$emit('click')"
 	>
 		<template v-if="icon">
 			<ion-icon
@@ -27,6 +29,12 @@ export default {
 		name: {
 			type: String,
 			required: false,
+		},
+		bg: {
+			type: String,
+		},
+		color: {
+			type: String,
 		},
 		mode: {
 			type: String,

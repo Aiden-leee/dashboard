@@ -30,7 +30,6 @@ export default {
 	},
 	methods: {
 		createChart() {
-			console.log(this);
 			const _this = this;
 			let ctx = _this.id;
 			new Chart(ctx, {

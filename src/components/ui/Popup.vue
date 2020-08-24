@@ -66,19 +66,19 @@ export default {
 @keyframes slide-in {
 	from {
 		opacity: 0;
-		transform: translate(132.5px, -20%);
+		transform: translate(0, -20%);
 	}
 	to {
 		opacity: 1;
-		transform: translate(132.5px, 0);
+		transform: translate(0, 0);
 	}
 }
 @keyframes slide-out {
 	from {
-		transform: translate(132.5px, 0);
+		transform: translate(0, 0);
 	}
 	to {
-		transform: translate(132.5px, -20%);
+		transform: translate(0, -20%);
 	}
 }
 </style>

@@ -17,7 +17,7 @@ Login, Signup, Dashboard, Component, Map, Chart 페이지로 구성 되어있습
 
 ## Grid
 레이아웃 Grid는 아래의 패턴을 갖고 있습니다.   
-<img width="345" alt="스크린샷 2020-09-04 오전 12 24 08" src="https://user-images.githubusercontent.com/52125590/92134862-0018c980-ee45-11ea-86d7-e839cc69742f.png">
+<img width="336" alt="스크린샷 2020-09-04 오전 12 24 08" src="https://user-images.githubusercontent.com/52125590/92135165-5f76d980-ee45-11ea-9391-5186dc47ea72.png">
 
 ```
 <div class="row">

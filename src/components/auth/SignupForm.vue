@@ -63,7 +63,7 @@
 			</button>
 			<p class="mt-2">
 				Allready have an account?
-				<router-link to="/Login">Login</router-link>
+				<router-link to="/login">Login</router-link>
 			</p>
 		</form>
 	</div>
@@ -71,7 +71,7 @@
 
 <script>
 import Input from '@/components/ui/Input.vue';
-import { registerUser } from '@/api/auth';
+// import { registerUser } from '@/api/auth';
 import { validateEmail } from '@/utils/validation';
 export default {
 	data() {
@@ -91,19 +91,19 @@ export default {
 	},
 	methods: {
 		async submitForm() {
-			const userData = {
-				username: this.username,
-				nickname: this.nickname,
-				password: this.password,
-			};
-			try {
-				await registerUser(userData);
-			} catch (error) {
-				console.log(error.response);
-			} finally {
-				this.$router.push('/login');
-				this.initForm();
-			}
+			// const userData = {
+			// 	username: this.username,
+			// 	nickname: this.nickname,
+			// 	password: this.password,
+			// };
+			// try {
+			// 	await registerUser(userData);
+			// } catch (error) {
+			// 	console.log(error.response);
+			// } finally {
+			// 	this.$router.push('/login');
+			// 	this.initForm();
+			// }
 		},
 		initForm() {
 			this.username = '';

@@ -1,22 +1,22 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import {
-	saveAuthToCookie,
+	// saveAuthToCookie,
 	saveUserToCookie,
 	saveNicknameToCookie,
-	getAuthFromCookie,
-	getUserFromCookie,
-	getNicknameFromCookie,
+	// getAuthFromCookie,
+	// getUserFromCookie,
+	// getNicknameFromCookie,
 } from '@/utils/cookies';
-import { loginUser } from '../api/auth';
+// import { loginUser } from '../api/auth';
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
 	state: {
-		username: getUserFromCookie() || '',
-		token: getAuthFromCookie() || '',
-		nickname: getNicknameFromCookie() || '',
+		username: '',
+		// token: getAuthFromCookie() || '',
+		nickname: '',
 		isWrap: false,
 		isMenuOpen: false,
 	},
@@ -52,15 +52,20 @@ export default new Vuex.Store({
 		},
 	},
 	actions: {
-		async LOGIN({ commit }, userData) {
-			const { data } = await loginUser(userData);
-			commit('setToken', data.token);
-			commit('setUsername', data.user.username);
-			commit('saveNickname', data.user.nickname);
-			saveAuthToCookie(data.token);
-			saveUserToCookie(data.user.username);
-			saveNicknameToCookie(data.user.nickname);
-			return data;
+		async LOGIN({ commit }) {
+			// const { data } = await loginUser(userData);
+			// commit('setToken', data.token);
+			// commit('setUsername', data.user.username);
+			// commit('saveNickname', data.user.nickname);
+			commit('setUsername', 'test01@a.com');
+			commit('saveNickname', 'test01');
+
+			saveUserToCookie('test01@a.com');
+			saveNicknameToCookie('test01');
+			// saveAuthToCookie(data.token);
+			// saveUserToCookie(data.user.username);
+			// saveNicknameToCookie(data.user.nickname);
+			return;
 		},
 	},
 });

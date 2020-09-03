@@ -42,9 +42,9 @@ export default {
 		},
 		handleLogout() {
 			this.$store.commit('clearUsername');
-			this.$store.commit('clearToken');
+			// this.$store.commit('clearToken');
 			this.$store.commit('clearNickname');
-			deleteCookie('til_auth');
+			// deleteCookie('til_auth');
 			deleteCookie('til_user');
 			deleteCookie('til_nickname');
 			this.$router.push('/');

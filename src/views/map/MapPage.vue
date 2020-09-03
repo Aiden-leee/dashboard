@@ -8,7 +8,7 @@
 					</div>
 					<div class="card_body">
 						<div class="wrap">
-							<Map />
+							<Map height="350px" />
 						</div>
 					</div>
 				</div>

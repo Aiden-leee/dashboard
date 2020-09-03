@@ -1,10 +1,13 @@
+html {
+    width: 100%;
+}
 body{
     position: relative;
     font-family: NotoSansKR,"맑은 고딕","Malgun Gothic","Apple Gothic",Helvetica,Arial,sans-serif;
     font-size: 16px;
     color: $defaultColor;
     background: #f4f7fa;
-    min-width: 480px;
+    width: 100%;
     min-height: 100vh;
 }
 
@@ -39,7 +42,7 @@ body{
        }
     }
     .navigation_body{
-        height: calc( 100% - 70px);
+        height: calc( 100vh - 70px);
         color: #fff;
         > ul{
             > li{
@@ -168,6 +171,7 @@ body{
     }
 }
 .page_view{
+    width: 100%;
     min-height: calc(100vh - 70px);
     padding: 30px;
     .page_header{
@@ -296,6 +300,11 @@ body{
         @for $i from 1 through $columns {
             &.col-#{$i} {
                 width: (100% / $i);
+            }
+        }
+        @media only screen and (max-width: 680px) {
+            &.col-2 {
+                width: 100%;
             }
         }
         .card {

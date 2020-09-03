@@ -35,26 +35,31 @@ const router = new VueRouter({
 					path: 'button',
 					name: 'Component',
 					component: () => import('@/views/component/ButtonPage.vue'),
+					meta: { auth: true },
 				},
 				{
 					path: 'tab',
 					name: 'Component',
 					component: () => import('@/views/component/TabPage.vue'),
+					meta: { auth: true },
 				},
 				{
 					path: 'input',
 					name: 'Component',
 					component: () => import('@/views/component/InputPage.vue'),
+					meta: { auth: true },
 				},
 				{
 					path: 'table',
 					name: 'Component',
 					component: () => import('@/views/component/TablePage.vue'),
+					meta: { auth: true },
 				},
 				{
 					path: 'popup',
 					name: 'Component',
 					component: () => import('@/views/component/PopupPage.vue'),
+					meta: { auth: true },
 				},
 			],
 			meta: { auth: true },
@@ -82,6 +87,7 @@ router.beforeEach((to, from, next) => {
 		next('/dashboard');
 		return;
 	}
+
 	if (to.meta.auth && !store.getters.isLogin) {
 		next('/login');
 		return;

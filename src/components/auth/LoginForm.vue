@@ -56,8 +56,8 @@ import Input from '@/components/ui/Input.vue';
 export default {
 	data() {
 		return {
-			username: '',
-			password: '',
+			username: 'test01@a.com',
+			password: '1234',
 		};
 	},
 	components: {

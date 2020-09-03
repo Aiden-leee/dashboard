@@ -176,13 +176,17 @@ input:active {
   outline: 0;
 }
 
+html {
+  width: 100%;
+}
+
 body {
   position: relative;
   font-family: NotoSansKR,"맑은 고딕","Malgun Gothic","Apple Gothic",Helvetica,Arial,sans-serif;
   font-size: 16px;
   color: #888;
   background: #f4f7fa;
-  min-width: 480px;
+  width: 100%;
   min-height: 100vh;
 }
 
@@ -232,7 +236,7 @@ body {
 }
 
 .navigation .navigation_body {
-  height: calc( 100% - 70px);
+  height: calc( 100vh - 70px);
   color: #fff;
 }
 
@@ -386,6 +390,7 @@ body {
 }
 
 .page_view {
+  width: 100%;
   min-height: calc(100vh - 70px);
   padding: 30px;
 }
@@ -581,6 +586,12 @@ body {
   width: 8.33333%;
 }
 
+@media only screen and (max-width: 680px) {
+  .row .col.col-2 {
+    width: 100%;
+  }
+}
+
 .row .col .card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -704,6 +715,7 @@ body {
           align-items: center;
   width: 100%;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 .auth_wrapper .auth_content {

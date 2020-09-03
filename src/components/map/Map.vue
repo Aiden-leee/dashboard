@@ -1,6 +1,6 @@
 <template>
 	<div class="">
-		<div id="map" style="width: 100%; height: 200px;"></div>
+		<div id="map" style="width: 100%;" :style="{ height: height }"></div>
 	</div>
 </template>
 
@@ -10,6 +10,10 @@ export default {
 		address: {
 			type: String,
 			default: '경기 김포시 풍무로69번길 51',
+		},
+		height: {
+			type: String,
+			default: '200px',
 		},
 	},
 	mounted() {

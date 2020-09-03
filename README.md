@@ -214,7 +214,8 @@ export default {
 
 
 ## UI - Table
-Table 컴포넌트 사용법입니다.
+Table 컴포넌트 사용법입니다.   
+<img width="642" alt="스크린샷 2020-09-04 오전 1 19 08" src="https://user-images.githubusercontent.com/52125590/92140906-b16f2d80-ee4c-11ea-8971-4e917c09deb9.png">
 ```javascript
 <Table
   :column-data="tableColumn"

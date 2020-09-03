@@ -48,6 +48,8 @@ Button 컴포넌트 사용법입니다.
 
 ## UI - Tab
 Tab 컴포넌트 사용법입니다.
+<img width="500" alt="스크린샷 2020-09-04 오전 12 28 31" src="https://user-images.githubusercontent.com/52125590/92135608-f2177880-ee45-11ea-9691-99e4f648776c.png">
+
 ```
 <Tabs :tabIndex.sync="tabIndex">
   <Tab name="Tab1" :active="true">

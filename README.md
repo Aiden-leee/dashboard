@@ -235,3 +235,43 @@ export default {
 | columnData          | tableData                     | row                  | paging                     |
 |---------------------|-------------------------------|----------------------|----------------------------|
 | Array,<br> required | [Object, Array],<br> required | number,<br> required | boolean,<br> default: true |
+
+## modal(popup)
+Popup 컴포넌트 사용법입니다.
+```javascript
+<Button
+  type="button"
+  @click="openPopup"
+  mode="primary"
+  name="Popup"
+></Button>
+<Popup
+  id="popup01"
+  @close="closePopup"
+  @complete="complete"
+  v-if="popup01"
+>
+  <h4 slot="header">Popup01</h4>
+  <div class="text">
+    Popup Component !
+  </div>
+</Popup>
+export default {
+	data() {
+		return {
+			popup01: false,
+		};
+	},
+	methods: {
+		openPopup() {
+			this.popup01 = true;
+		},
+		closePopup() {
+			this.popup01 = false;
+		},
+		complete() {
+			this.popup01 = false;
+		},
+	},
+};
+```

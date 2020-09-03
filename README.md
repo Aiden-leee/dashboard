@@ -6,7 +6,7 @@
 
 ## Project Explain
 
-Vue.js로 만든 대시보드 입니다.
+Vue.js로 만든 대시보드 입니다.   
 Login, Signup, Dashboard, Map, Chart 페이지로 구성 되어있습니다.
 
 ## Login, Signup

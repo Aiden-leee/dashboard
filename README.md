@@ -1,5 +1,5 @@
 # Dashboard
-
+<img width="600" alt="스크린샷 2020-09-03 오후 11 39 56" src="https://user-images.githubusercontent.com/52125590/92133415-5258eb00-ee43-11ea-8678-a46cd68b360c.png">
 
 ### Dashboard Link
 [view](http://dashboard-vue.s3-website.ap-northeast-2.amazonaws.com/).

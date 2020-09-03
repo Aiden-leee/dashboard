@@ -16,7 +16,9 @@ Login, Signup, Dashboard, Component, Map, Chart 페이지로 구성 되어있습
 배경에 사각형태를 각각 애니메이션과 딜레이를 주어서 시간차로 올라오는 효과를 주었습니다.
 
 ## Grid
-레이아웃 Grid는 아래의 패턴을 갖고 있습니다.
+레이아웃 Grid는 아래의 패턴을 갖고 있습니다.   
+<img width="345" alt="스크린샷 2020-09-04 오전 12 24 08" src="https://user-images.githubusercontent.com/52125590/92134862-0018c980-ee45-11ea-86d7-e839cc69742f.png">
+
 ```
 <div class="row">
   <div class="col">

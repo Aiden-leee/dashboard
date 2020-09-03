@@ -87,7 +87,8 @@ Radio 컴포넌트 사용법입니다.
 
 
 ## UI - Input Checkbox
-Checkbox 컴포넌트 사용법 입니다.
+Checkbox 컴포넌트 사용법 입니다.   
+<img width="111" alt="스크린샷 2020-09-04 오전 12 33 22" src="https://user-images.githubusercontent.com/52125590/92136888-86360f80-ee47-11ea-93a4-8db9da9dc409.png">
 ```
 <Checkbox
   id="chk1"
@@ -98,4 +99,28 @@ Checkbox 컴포넌트 사용법 입니다.
   label="checkbox1"
 ></Checkbox>
 let checkbox01 = [];
+```
+
+## UI - Input 
+Input 컴포넌트 사용법 입니다.
+
+```javascript
+<Input
+  id="input01"
+  placeholder="text"
+  class="mb-1"
+  v-model="ipt01"
+/>
+```
+
+```javascript
+<div class="ui-input-combine">
+  <Input id="input04" placeholder="text" v-model="ipt04" />
+  <Button
+    type="submit"
+    class="ui-btn btn-primary mb-0"
+    name="검색"
+    style="width: 50px; height: 37px;"
+  ></Button>
+</div>
 ```

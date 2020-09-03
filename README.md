@@ -153,8 +153,8 @@ let switch02 = true;
 | string, required | string,required | boolean | boolean | boolean | string | boolean | null     |
 
 ## UI - Textarea
-Textarea 컴포넌트 사용법입니다.
-
+Textarea 컴포넌트 사용법입니다.   
+<img width="646" alt="스크린샷 2020-09-04 오전 12 33 52" src="https://user-images.githubusercontent.com/52125590/92139637-f98d5080-ee4a-11ea-879c-908a64ae3e55.png">
 ```javascript
 <Textarea
   id="textarea01"

@@ -84,3 +84,18 @@ Radio 컴포넌트 사용법입니다.
 | id               | name            | label  | value | checked | disabled |
 |------------------|-----------------|--------|-------|---------|----------|
 | string, required | string, required| string | null  | boolean | null     |
+
+
+## UI - Input Checkbox
+Checkbox 컴포넌트 사용법 입니다.
+```
+<Checkbox
+  id="chk1"
+  name="chk1"
+  :val="1"
+  checked
+  v-model="checkbox01"
+  label="checkbox1"
+></Checkbox>
+let checkbox01 = [];
+```

@@ -35,7 +35,7 @@ Login, Signup, Dashboard, Component, Map, Chart 페이지로 구성 되어있습
 ```
 
 ## UI - Button
-Button 컴포넌트 사용법입니다.  
+Button 컴포넌트 사용법입니다.     
 <img width="577" alt="스크린샷 2020-09-04 오전 12 16 28" src="https://user-images.githubusercontent.com/52125590/92133948-ecb92e80-ee43-11ea-9495-564f2417bb60.png">
 
 ```

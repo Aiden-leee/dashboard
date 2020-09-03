@@ -4,7 +4,7 @@
 <img width="600" alt="스크린샷 2020-09-03 오후 11 40 37" src="https://user-images.githubusercontent.com/52125590/92133426-55ec7200-ee43-11ea-866e-2f5eaf571ded.png">
 
 ### Dashboard Link
-[view](http://dashboard-vue.s3-website.ap-northeast-2.amazonaws.com/).
+[view](http://dashboard-vue.s3-website.ap-northeast-2.amazonaws.com/)
 
 ## Project Explain
 

@@ -151,3 +151,22 @@ let switch02 = true;
 | id               | name            | val     | value   | mode    | label  | checked | disabled |
 |------------------|-----------------|---------|---------|---------|--------|---------|----------|
 | string, required | string,required | boolean | boolean | boolean | string | boolean | null     |
+
+## UI - Textarea
+Textarea 컴포넌트 사용법입니다.
+
+```javascript
+<Textarea
+  id="textarea01"
+  name="textarea01"
+  :cols="30"
+  :rows="10"
+  placeholder="text..."
+  v-model="textareaValue"
+></Textarea>
+let textareaValue = "";
+```
+| id               | name            | cols                    | rows                    | value  | placeholder | disabled |
+|------------------|-----------------|-------------------------|-------------------------|--------|-------------|----------|
+| string, required | string,required | number,<br> default: 30 | number,<br> default: 10 | string | string      | null     |
+

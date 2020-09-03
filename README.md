@@ -100,6 +100,10 @@ Checkbox 컴포넌트 사용법 입니다.
 ></Checkbox>
 let checkbox01 = [];
 ```
+| id               | name             | label            | val            | value | checked | disabled |
+|------------------|------------------|------------------|----------------|-------|---------|----------|
+| string, required | string, required | string, required | null, required | null  | boolean | null     |
+
 
 ## UI - Input 
 Input 컴포넌트 사용법 입니다.   

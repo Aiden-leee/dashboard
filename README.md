@@ -113,9 +113,9 @@ Input 컴포넌트 사용법 입니다.
 <Input
   id="input01"
   placeholder="text"
-  class="mb-1"
   v-model="ipt01"
 />
+let ipt01 = "";
 ```
 
 `검색버튼 결합 Input` 
@@ -124,9 +124,12 @@ Input 컴포넌트 사용법 입니다.
   <Input id="input04" placeholder="text" v-model="ipt04" />
   <Button
     type="submit"
-    class="ui-btn btn-primary mb-0"
+    class="ui-btn btn-primary"
     name="검색"
-    style="width: 50px; height: 37px;"
   ></Button>
 </div>
+let ipt04 = ""
 ```
+| id               | type                        | color  | value | placeholder | disabled |
+|------------------|-----------------------------|--------|-------|-------------|----------|
+| string, required | string,<br> default: "text" | string | null  | string      | null     |

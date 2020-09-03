@@ -19,7 +19,7 @@ Login, Signup, Dashboard, Component, Map, Chart 페이지로 구성 되어있습
 레이아웃 Grid는 아래의 패턴을 갖고 있습니다.   
 <img width="336" alt="스크린샷 2020-09-04 오전 12 24 08" src="https://user-images.githubusercontent.com/52125590/92135165-5f76d980-ee45-11ea-9391-5186dc47ea72.png">
 
-```
+```javascript
 <div class="row">
   <div class="col">
     <div class="card">
@@ -38,7 +38,7 @@ Login, Signup, Dashboard, Component, Map, Chart 페이지로 구성 되어있습
 Button 컴포넌트 사용법입니다.     
 <img width="577" alt="스크린샷 2020-09-04 오전 12 16 28" src="https://user-images.githubusercontent.com/52125590/92133948-ecb92e80-ee43-11ea-9495-564f2417bb60.png">
 
-```
+```javascript
 <Button type="button" name="Primary" mode="primary" />
 ```
 | type             | name   | bg     | color  | icon   | mode                                                                                                       |
@@ -50,7 +50,7 @@ Button 컴포넌트 사용법입니다.
 Tab 컴포넌트 사용법입니다.   
 <img width="500" alt="스크린샷 2020-09-04 오전 12 28 31" src="https://user-images.githubusercontent.com/52125590/92135608-f2177880-ee45-11ea-9691-99e4f648776c.png">
 
-```
+```javascript
 <Tabs :tabIndex.sync="tabIndex">
   <Tab name="Tab1" :active="true">
     <h3 class="title mb-1">First Tab Content</h3>
@@ -71,7 +71,7 @@ let tabIndex = 0;
 ## UI - Input Radio
 Radio 컴포넌트 사용법입니다.   
 <img width="104" alt="스크린샷 2020-09-04 오전 12 33 11" src="https://user-images.githubusercontent.com/52125590/92136464-03ad5000-ee47-11ea-9a04-394843151ce9.png">
-```
+```javascript
 <Radio
   id="radio01"
   name="radio1"
@@ -89,7 +89,7 @@ Radio 컴포넌트 사용법입니다.
 ## UI - Input Checkbox
 Checkbox 컴포넌트 사용법 입니다.   
 <img width="111" alt="스크린샷 2020-09-04 오전 12 33 22" src="https://user-images.githubusercontent.com/52125590/92136888-86360f80-ee47-11ea-93a4-8db9da9dc409.png">
-```
+```javascript
 <Checkbox
   id="chk1"
   name="chk1"
@@ -102,7 +102,8 @@ let checkbox01 = [];
 ```
 
 ## UI - Input 
-Input 컴포넌트 사용법 입니다.
+Input 컴포넌트 사용법 입니다.   
+<img width="290" alt="스크린샷 2020-09-04 오전 12 33 31" src="https://user-images.githubusercontent.com/52125590/92137189-d7460380-ee47-11ea-9fb2-402631cfebc6.png">
 
 ```javascript
 <Input
@@ -113,6 +114,7 @@ Input 컴포넌트 사용법 입니다.
 />
 ```
 
+`검색버튼 결합 Input` 
 ```javascript
 <div class="ui-input-combine">
   <Input id="input04" placeholder="text" v-model="ipt04" />

@@ -80,6 +80,7 @@ Radio 컴포넌트 사용법입니다.
   v-model="radioCheck01"
   value="test1"
 ></Radio>
+let radioCheck01 = true;
 ```
 | id               | name            | label  | value | checked | disabled |
 |------------------|-----------------|--------|-------|---------|----------|
@@ -136,8 +137,8 @@ let ipt04 = ""
 
 
 ## UI - Input Switch(toggle)
-Switch 컴포넌트 사용법입니다.
-
+Switch 컴포넌트 사용법입니다.   
+<img width="141" alt="스크린샷 2020-09-04 오전 12 33 43" src="https://user-images.githubusercontent.com/52125590/92139177-589e9580-ee4a-11ea-8eeb-495b58aa3a0f.png">
 ```javascript
 <Toggle
   id="switchs2"

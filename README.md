@@ -133,3 +133,20 @@ let ipt04 = ""
 | id               | type                        | color  | value | placeholder | disabled |
 |------------------|-----------------------------|--------|-------|-------------|----------|
 | string, required | string,<br> default: "text" | string | null  | string      | null     |
+
+
+## UI - Input Switch(toggle)
+Switch 컴포넌트 사용법입니다.
+
+```javascript
+<Toggle
+  id="switchs2"
+  name="onoff2"
+  label="On&Off"
+  v-model="switch02"
+></Toggle>
+let switch02 = true;
+```
+| id               | name            | val     | value   | mode    | label  | checked | disabled |
+|------------------|-----------------|---------|---------|---------|--------|---------|----------|
+| string, required | string,required | boolean | boolean | boolean | string | boolean | null     |

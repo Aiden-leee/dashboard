@@ -65,9 +65,11 @@ Tab 컴포넌트 사용법입니다.
     <p>Tabs Component 3</p>
   </Tab>
 </Tabs>
-data() {
-  return {
-    tabIndex: 0
+export default {
+  data() {
+    return {
+      tabIndex: 0
+    }
   }
 }
 ```
@@ -84,9 +86,11 @@ Radio 컴포넌트 사용법입니다.
   v-model="radioCheck01"
   value="test1"
 ></Radio>
-data() {
-  return {
-    radioCheck01: true
+export default {
+  data() {
+    return {
+      radioCheck01: true
+    }
   }
 }
 ```
@@ -107,9 +111,11 @@ Checkbox 컴포넌트 사용법 입니다.
   v-model="checkbox01"
   label="checkbox1"
 ></Checkbox>
-data() {
-  return {
-    checkbox01: []  
+export default {
+  data() {
+    return {
+      checkbox01: []  
+    }
   }
 }
 ```
@@ -128,9 +134,11 @@ Input 컴포넌트 사용법 입니다.
   placeholder="text"
   v-model="ipt01"
 />
-data() {
-  return {
-    ipt01: ""
+export default {
+  data() {
+    return {
+      ipt01: ""
+    }
   }
 }
 ```
@@ -145,9 +153,11 @@ data() {
     name="검색"
   ></Button>
 </div>
-data() {
-  return {
-    ipt04: "" 
+export default {
+  data() {
+    return {
+      ipt04: "" 
+    }
   }
 }
 ```
@@ -166,9 +176,11 @@ Switch 컴포넌트 사용법입니다.
   label="On&Off"
   v-model="switch02"
 ></Toggle>
-data() {
-  return {
-    switch02: true 
+export default {
+  data() {
+    return {
+      switch02: true 
+    }
   }
 }
 ```
@@ -188,9 +200,11 @@ Textarea 컴포넌트 사용법입니다.
   placeholder="text..."
   v-model="textareaValue"
 ></Textarea>
-data() {
-  return {
-    textareaValue: "' 
+export default {
+  data() {
+    return {
+      textareaValue: "' 
+    }
   }
 }
 ```
@@ -207,11 +221,13 @@ Table 컴포넌트 사용법입니다.
   :table-data="tableList"
   :row="row"
 ></Table>
-data() {
-  return {
-    row: 5,
-    tableColumn: ['No', 'ID', 'Name'],
-    tableList: []
-  }
-}     
+export default {
+  data() {
+    return {
+      row: 5,
+      tableColumn: ['No', 'ID', 'Name'],
+      tableList: []
+    }
+  }  
+}
 ```

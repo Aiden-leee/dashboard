@@ -69,8 +69,8 @@ let tabIndex = 0;
 ```
 
 ## UI - Input Radio
-Radio 컴포넌트 사용법입니다.
-
+Radio 컴포넌트 사용법입니다.   
+<img width="104" alt="스크린샷 2020-09-04 오전 12 33 11" src="https://user-images.githubusercontent.com/52125590/92136464-03ad5000-ee47-11ea-9a04-394843151ce9.png">
 ```
 <Radio
   id="radio01"

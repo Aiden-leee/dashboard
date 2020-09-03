@@ -7,7 +7,7 @@
 ## Project Explain
 
 Vue.js로 만든 대시보드 입니다.   
-Login, Signup, Dashboard, Map, Chart 페이지로 구성 되어있습니다.
+Login, Signup, Dashboard, Component, Map, Chart 페이지로 구성 되어있습니다.
 
 ## Login, Signup
 로그인 박스를 깔끔하게 중앙에 배치하고, 
@@ -31,7 +31,12 @@ Login, Signup, Dashboard, Map, Chart 페이지로 구성 되어있습니다.
 ```
 
 ## UI - Button
-```
+Button 컴포넌트 사용법입니다
 
 ```
-
+<Button type="button" name="Primary" mode="primary" />
+```
+| type             | name   | bg     | color  | icon   | mode                                                                                                       |
+|------------------|--------|--------|--------|--------|------------------------------------------------------------------------------------------------------------|
+| string, required | string | string | string | string | 'primary',<br> 'secondary',<br> 'info',<br> 'success',<br> 'warning',<br> 'error',<br> 'light',<br> 'dark' |
+|                  |        |        |        |        |                                                                                                            |

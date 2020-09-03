@@ -237,7 +237,9 @@ export default {
 | Array,<br> required | [Object, Array],<br> required | number,<br> required | boolean,<br> default: true |
 
 ## modal(popup)
-Popup 컴포넌트 사용법입니다.
+Popup 컴포넌트 사용법입니다.   
+<img width="685" alt="스크린샷 2020-09-04 오전 1 24 57" src="https://user-images.githubusercontent.com/52125590/92141494-7a4d4c00-ee4d-11ea-8bc6-8ab05bb3d242.png">
+
 ```javascript
 <Button
   type="button"
@@ -253,25 +255,25 @@ Popup 컴포넌트 사용법입니다.
 >
   <h4 slot="header">Popup01</h4>
   <div class="text">
-    Popup Component !
+    Popup Component
   </div>
 </Popup>
 export default {
-	data() {
-		return {
-			popup01: false,
-		};
+   data() {
+	return {
+		popup01: false,
+	};
+   },
+   methods: {
+	openPopup() {
+		this.popup01 = true;
 	},
-	methods: {
-		openPopup() {
-			this.popup01 = true;
-		},
-		closePopup() {
-			this.popup01 = false;
-		},
-		complete() {
-			this.popup01 = false;
-		},
+	closePopup() {
+		this.popup01 = false;
 	},
+	complete() {
+		this.popup01 = false;
+	},
+   },
 };
 ```

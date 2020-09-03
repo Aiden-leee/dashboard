@@ -231,3 +231,6 @@ export default {
   }  
 }
 ```
+| columnData          | tableData                     | row                  | paging                     |
+|---------------------|-------------------------------|----------------------|----------------------------|
+| Array,<br> required | [Object, Array],<br> required | number,<br> required | boolean,<br> default: true |

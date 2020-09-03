@@ -39,4 +39,3 @@ Button 컴포넌트 사용법입니다
 | type             | name   | bg     | color  | icon   | mode                                                                                                       |
 |------------------|--------|--------|--------|--------|------------------------------------------------------------------------------------------------------------|
 | string, required | string | string | string | string | 'primary',<br> 'secondary',<br> 'info',<br> 'success',<br> 'warning',<br> 'error',<br> 'light',<br> 'dark' |
-|                  |        |        |        |        |                                                                                                            |

@@ -67,3 +67,20 @@ Tab 컴포넌트 사용법입니다.
 </Tabs>
 let tabIndex = 0;
 ```
+
+## UI - Input Radio
+Radio 컴포넌트 사용법입니다.
+
+```
+<Radio
+  id="radio01"
+  name="radio1"
+  label="Radio01"
+  checked
+  v-model="radioCheck01"
+  value="test1"
+></Radio>
+```
+| id               | name            | label  | value | checked | disabled |
+|------------------|-----------------|--------|-------|---------|----------|
+| string, required | string, required| string | null  | boolean | null     |

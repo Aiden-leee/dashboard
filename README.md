@@ -65,7 +65,11 @@ Tab 컴포넌트 사용법입니다.
     <p>Tabs Component 3</p>
   </Tab>
 </Tabs>
-let tabIndex = 0;
+data() {
+  return {
+    tabIndex: 0
+  }
+}
 ```
 
 ## UI - Input Radio
@@ -80,7 +84,11 @@ Radio 컴포넌트 사용법입니다.
   v-model="radioCheck01"
   value="test1"
 ></Radio>
-let radioCheck01 = true;
+data() {
+  return {
+    radioCheck01: true
+  }
+}
 ```
 | id               | name            | label  | value | checked | disabled |
 |------------------|-----------------|--------|-------|---------|----------|
@@ -99,7 +107,11 @@ Checkbox 컴포넌트 사용법 입니다.
   v-model="checkbox01"
   label="checkbox1"
 ></Checkbox>
-let checkbox01 = [];
+data() {
+  return {
+    checkbox01: []  
+  }
+}
 ```
 | id               | name             | label            | val            | value | checked | disabled |
 |------------------|------------------|------------------|----------------|-------|---------|----------|
@@ -116,7 +128,11 @@ Input 컴포넌트 사용법 입니다.
   placeholder="text"
   v-model="ipt01"
 />
-let ipt01 = "";
+data() {
+  return {
+    ipt01: ""
+  }
+}
 ```
 
 `검색버튼 결합 Input` 
@@ -129,7 +145,11 @@ let ipt01 = "";
     name="검색"
   ></Button>
 </div>
-let ipt04 = ""
+data() {
+  return {
+    ipt04: "" 
+  }
+}
 ```
 | id               | type                        | color  | value | placeholder | disabled |
 |------------------|-----------------------------|--------|-------|-------------|----------|
@@ -146,7 +166,11 @@ Switch 컴포넌트 사용법입니다.
   label="On&Off"
   v-model="switch02"
 ></Toggle>
-let switch02 = true;
+data() {
+  return {
+    switch02: true 
+  }
+}
 ```
 | id               | name            | val     | value   | mode    | label  | checked | disabled |
 |------------------|-----------------|---------|---------|---------|--------|---------|----------|
@@ -164,9 +188,30 @@ Textarea 컴포넌트 사용법입니다.
   placeholder="text..."
   v-model="textareaValue"
 ></Textarea>
-let textareaValue = "";
+data() {
+  return {
+    textareaValue: "' 
+  }
+}
 ```
 | id               | name            | cols                    | rows                    | value  | placeholder | disabled |
 |------------------|-----------------|-------------------------|-------------------------|--------|-------------|----------|
 | string, required | string,required | number,<br> default: 30 | number,<br> default: 10 | string | string      | null     |
 
+
+## UI - Table
+Table 컴포넌트 사용법입니다.
+```javascript
+<Table
+  :column-data="tableColumn"
+  :table-data="tableList"
+  :row="row"
+></Table>
+data() {
+  return {
+    row: 5,
+    tableColumn: ['No', 'ID', 'Name'],
+    tableList: []
+  }
+}     
+```

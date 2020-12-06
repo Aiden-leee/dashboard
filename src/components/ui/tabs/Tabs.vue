@@ -55,4 +55,34 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.ui-tab {
+	> ul {
+		display: flex;
+		> li {
+			&.active {
+				> a {
+					border-radius: 5px 5px 0 0;
+					background: $pointColor;
+					color: #fff;
+				}
+			}
+			> a {
+				display: block;
+				padding: 10px 20px;
+				height: 100%;
+			}
+		}
+	}
+	> .tab_content {
+		padding: 20px;
+		background: $pointColor;
+		color: #fff;
+		// border: 2px solid $pointColor;
+		min-height: 150px;
+		.title {
+			font-size: 18px;
+		}
+	}
+}
+</style>

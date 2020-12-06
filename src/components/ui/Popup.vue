@@ -6,7 +6,7 @@
 					<slot name="header"></slot>
 					<Button
 						type="button"
-						icon="close-outline"
+						icon="times"
 						class="mb-0"
 						@click="$emit('close')"
 					></Button>
@@ -79,6 +79,57 @@ export default {
 	}
 	to {
 		transform: translate(0, -20%);
+	}
+}
+
+.ui-popup {
+	display: flex;
+	position: fixed;
+	left: 0;
+	top: 0;
+	align-items: center;
+	justify-content: center;
+	width: calc(100% - -265px);
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+	transition: $layoutTransition;
+	z-index: 101;
+	@media only screen and (max-width: 980px) {
+		width: 100%;
+	}
+	.wrap {
+		display: flex;
+		flex-direction: column;
+		width: 500px;
+		min-height: 250px;
+		transform: translate(0, 0);
+		background: #fff;
+		border-radius: $layoutRadius;
+		overflow: hidden;
+
+		.popup_header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			height: 60px;
+			padding: 20px;
+			font-size: 18px;
+			background: $pointColor;
+			// border-radius: 10px 10px 0 0;
+			> h4 {
+				color: #fff;
+			}
+		}
+		.popup_body {
+			flex: 1 1 auto;
+			padding: 20px;
+		}
+		.popup_foot {
+			display: flex;
+			justify-content: center;
+			padding: 10px;
+			text-align: center;
+		}
 	}
 }
 </style>

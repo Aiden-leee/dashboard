@@ -50,4 +50,25 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.ui-textarea {
+	> textarea {
+		width: 100%;
+		padding: 10px 20px;
+		border: 1px solid $uiBorderColor;
+		height: auto;
+
+		&:disabled {
+			opacity: 0.4;
+			pointer-events: none;
+		}
+		&::placeholder {
+			color: #90959a;
+		}
+		&:focus {
+			outline: 0;
+			border: 1px solid #6f8bbb;
+		}
+	}
+}
+</style>

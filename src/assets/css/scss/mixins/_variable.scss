@@ -17,6 +17,21 @@ $cardTitleColor: #505b6f;
 $uiBorderColor: #e5e5e5;
 
 
+.ui-input-combine {
+	display: flex;
+	position: relative;
+	> .ui-input {
+		input {
+			padding: 10px 60px 10px 20px;
+		}
+	}
+	> .ui-btn {
+		position: absolute;
+		right: 0;
+	}
+}
+
+
 .text-center {
     text-align: center;
 }

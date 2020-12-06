@@ -7,9 +7,11 @@
 					@click.self="handleToggle"
 					:class="list.name === pathName ? 'expanded' : ''"
 				>
-					<ion-icon :name="list.icon" class="ion bold"></ion-icon>
+					<i class="fas" :class="[list.icon ? `fa-${list.icon}` : '']"></i>
+					<!-- <ion-icon :name="list.icon" class="ion bold"></ion-icon> -->
 					<span>{{ list.title }}</span>
-					<ion-icon name="chevron-down-outline" class="fold_arrow"></ion-icon>
+					<i class="fas fa-chevron-down fold_arrow"></i>
+					<!-- <ion-icon name="chevron-down-outline" class="fold_arrow"></ion-icon> -->
 				</a>
 				<div class="sub_menu">
 					<ul>
@@ -23,7 +25,8 @@
 			</template>
 			<template v-else>
 				<router-link :to="list.path">
-					<ion-icon :name="list.icon" class="ion bold"></ion-icon>
+					<i class="fas" :class="[list.icon ? `fa-${list.icon}` : '']"></i>
+					<!-- <ion-icon :name="list.icon" class="ion bold"></ion-icon> -->
 					{{ list.name }}
 				</router-link>
 			</template>

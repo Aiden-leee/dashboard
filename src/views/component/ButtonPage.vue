@@ -52,86 +52,58 @@
 											<Button
 												type="button"
 												class="mr-1"
-												icon="help-circle-outline"
+												icon="question-circle"
 											/>
 										</td>
-										<td>help-circle-outline</td>
+										<td>question-circle</td>
 									</tr>
 									<tr>
 										<td>
-											<Button
-												type="button"
-												class="mr-1"
-												icon="information-circle-outline"
-											/>
+											<Button type="button" class="mr-1" icon="info-circle" />
 										</td>
-										<td>information-circle-outline</td>
+										<td>info-circle</td>
 									</tr>
 									<tr>
 										<td>
-											<Button type="button" class="mr-1" icon="happy-outline" />
+											<Button type="button" class="mr-1" icon="smile" />
 										</td>
-										<td>happy-outline</td>
+										<td>smile</td>
 									</tr>
 									<tr>
 										<td>
-											<Button
-												type="button"
-												class="mr-1"
-												icon="chatbox-ellipses-outline"
-											/>
+											<Button type="button" class="mr-1" icon="comment-dots" />
 										</td>
-										<td>chatbox-ellipses-outline</td>
+										<td>comment-dots</td>
 									</tr>
 									<tr>
 										<td>
-											<Button
-												type="button"
-												class="mr-1"
-												icon="images-outline"
-											/>
+											<Button type="button" class="mr-1" icon="image" />
 										</td>
-										<td>images-outline</td>
+										<td>image</td>
 									</tr>
 									<tr>
 										<td>
-											<Button
-												type="button"
-												class="mr-1"
-												icon="chevron-back-outline"
-											/>
+											<Button type="button" class="mr-1" icon="chevron-left" />
 										</td>
-										<td>chevron-back-outline</td>
+										<td>chevron-left</td>
 									</tr>
 									<tr>
 										<td>
-											<Button
-												type="button"
-												class="mr-1"
-												icon="chevron-forward-outline"
-											/>
+											<Button type="button" class="mr-1" icon="chevron-right" />
 										</td>
-										<td>chevron-forward-outline</td>
+										<td>chevron-right</td>
 									</tr>
 									<tr>
 										<td>
-											<Button
-												type="button"
-												class="mr-1"
-												icon="chevron-up-outline"
-											/>
+											<Button type="button" class="mr-1" icon="chevron-up" />
 										</td>
-										<td>chevron-up-outline</td>
+										<td>chevron-up</td>
 									</tr>
 									<tr>
 										<td>
-											<Button
-												type="button"
-												class="mr-1"
-												icon="chevron-down-outline"
-											/>
+											<Button type="button" class="mr-1" icon="chevron-down" />
 										</td>
-										<td>chevron-down-outline</td>
+										<td>chevron-down</td>
 									</tr>
 								</tbody>
 							</table>
@@ -154,4 +126,70 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.ui-table {
+	width: 100%;
+
+	> table {
+		width: 100%;
+		border-collapse: separate;
+		thead {
+			tr {
+				th {
+					border: 1px solid $uiBorderColor;
+					color: $cardTitleColor;
+					font-weight: bold;
+					padding: 20px 15px;
+					text-align: center;
+					border-bottom: 0;
+					border-right: 0;
+					&:first-child {
+						border-radius: 10px 0 0 0;
+					}
+					&:last-child {
+						border-right: 1px solid $uiBorderColor;
+						border-radius: 0 10px 0 0;
+					}
+				}
+			}
+		}
+		tbody {
+			tr {
+				&.empty_col {
+					> td {
+						height: 30px;
+					}
+				}
+				&:nth-of-type(odd) {
+					background-color: rgba(111, 210, 255, 0.05);
+				}
+				&:hover {
+					background-color: #e2edff;
+				}
+				td {
+					padding: 10px 15px;
+					border: 1px solid $uiBorderColor;
+					text-align: center;
+					border-bottom: 0;
+					border-right: 0;
+
+					&:last-child {
+						border-right: 1px solid $uiBorderColor;
+					}
+				}
+				&:last-child {
+					td {
+						border-bottom: 1px solid $uiBorderColor;
+						&:first-child {
+							border-radius: 0 0 0 10px;
+						}
+						&:last-child {
+							border-radius: 0 0 10px 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+</style>

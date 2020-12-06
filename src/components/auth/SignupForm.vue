@@ -26,41 +26,12 @@
 				color="#f4f7fa"
 				class="mb-1"
 			/>
-			<!-- <div class="ui-input-group mb-1">
-				<label for="username"></label>
-				<input
-					type="email"
-					placeholder="Email"
-					id="username"
-					v-model="username"
-				/>
-			</div> -->
-			<!-- <div class="ui-input-group mb-1">
-				<label for="nickname"></label>
-				<input
-					type="text"
-					placeholder="Nickname"
-					id="nickname"
-					v-model="nickname"
-				/>
-			</div>
-			<div class="ui-input-group mb-2">
-				<label for="password"></label>
-				<input
-					type="password"
-					placeholder="Password"
-					id="password"
-					v-model="password"
-				/>
-			</div> -->
-
-			<button
+			<Button
 				type="submit"
+				name="Signup"
 				class="ui-btn btn-primary"
 				:disabled="!isEmailValid || !password || !nickname"
-			>
-				Signup
-			</button>
+			/>
 			<p class="mt-2">
 				Allready have an account?
 				<router-link to="/login">Login</router-link>
@@ -71,6 +42,7 @@
 
 <script>
 import Input from '@/components/ui/Input.vue';
+import Button from '@/components/ui/Button.vue';
 // import { registerUser } from '@/api/auth';
 import { validateEmail } from '@/utils/validation';
 export default {
@@ -83,6 +55,7 @@ export default {
 	},
 	components: {
 		Input,
+		Button,
 	},
 	computed: {
 		isEmailValid() {

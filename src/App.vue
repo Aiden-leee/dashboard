@@ -25,4 +25,18 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss">
+html {
+	width: 100%;
+}
+body {
+	position: relative;
+	font-family: NotoSansKR, '맑은 고딕', 'Malgun Gothic', 'Apple Gothic',
+		Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	color: $defaultColor;
+	background: #f4f7fa;
+	width: 100%;
+	min-height: 100vh;
+}
+</style>

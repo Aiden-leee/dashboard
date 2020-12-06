@@ -20,9 +20,10 @@
 		<template v-if="isUserLogin">
 			<div class="utils">
 				<span class="nickname">{{ this.$store.state.nickname }} 님</span>
-				<a href="javascript:;" class="logout" @click="handleLogout"
-					><ion-icon name="log-out-outline" class="ion bold"></ion-icon
-				></a>
+				<a href="javascript:;" class="logout" @click="handleLogout">
+					<!-- <ion-icon name="log-out-outline" class="ion bold"></ion-icon> -->
+					<i class="fas fa-sign-out-alt"></i>
+				</a>
 			</div>
 		</template>
 	</header>

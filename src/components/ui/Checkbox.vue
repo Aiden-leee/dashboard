@@ -86,4 +86,71 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.ui-checkbox {
+	> input {
+		@include ui_input;
+		& + label {
+			position: relative;
+			display: inline-flex;
+			align-items: center;
+			cursor: pointer;
+			padding: 10px 10px 10px 30px;
+
+			&:before {
+				content: '';
+				position: absolute;
+				display: block;
+				left: 0;
+				top: 50%;
+				transform: translate(0, -50%);
+				width: 20px;
+				height: 20px;
+				left: 0;
+				border-radius: $cpRadius;
+				border: 1px solid $uiBorderColor;
+			}
+			&:after {
+				content: '';
+				position: absolute;
+				display: block;
+				top: 50%;
+				left: 6px;
+				width: 8px;
+				height: 8px;
+				margin-top: -4px;
+				transform-origin: 50%;
+				transform: rotate(-45deg) scale(0);
+				transition: none;
+			}
+		}
+		&:disabled + label {
+			opacity: 0.4;
+			pointer-events: none;
+		}
+		&:not(:disabled):hover + label {
+			&:before {
+				border: 1px solid #999;
+			}
+		}
+		&:checked + label {
+			&:before {
+				border: 1px solid $pointColor;
+			}
+			&:after {
+				background-color: transparent;
+				top: 50%;
+				left: 5px;
+				width: 11px;
+				height: 7px;
+				margin-top: -5px;
+				border-style: solid;
+				border-color: $pointColor;
+				border-width: 0 0 3px 3px;
+				transform: rotate(-45deg) scale(1);
+				transition: transform 0.2s ease-out;
+			}
+		}
+	}
+}
+</style>

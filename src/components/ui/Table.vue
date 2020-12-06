@@ -194,4 +194,128 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.ui-table {
+	width: 100%;
+
+	> table {
+		width: 100%;
+		border-collapse: separate;
+		thead {
+			tr {
+				th {
+					border: 1px solid $uiBorderColor;
+					color: $cardTitleColor;
+					font-weight: bold;
+					padding: 20px 15px;
+					text-align: center;
+					border-bottom: 0;
+					border-right: 0;
+					&:first-child {
+						border-radius: 10px 0 0 0;
+					}
+					&:last-child {
+						border-right: 1px solid $uiBorderColor;
+						border-radius: 0 10px 0 0;
+					}
+				}
+			}
+		}
+		tbody {
+			tr {
+				&.empty_col {
+					> td {
+						height: 30px;
+					}
+				}
+				&:nth-of-type(odd) {
+					background-color: rgba(111, 210, 255, 0.05);
+				}
+				&:hover {
+					background-color: #e2edff;
+				}
+				td {
+					padding: 10px 15px;
+					border: 1px solid $uiBorderColor;
+					text-align: center;
+					border-bottom: 0;
+					border-right: 0;
+
+					&:last-child {
+						border-right: 1px solid $uiBorderColor;
+					}
+				}
+				&:last-child {
+					td {
+						border-bottom: 1px solid $uiBorderColor;
+						&:first-child {
+							border-radius: 0 0 0 10px;
+						}
+						&:last-child {
+							border-radius: 0 0 10px 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.ui-pagination {
+	.page {
+		display: flex;
+		justify-content: center;
+		> li {
+			width: 30px;
+			height: 30px;
+			> a {
+				display: block;
+				width: 100%;
+				height: 100%;
+				padding: 5px;
+				line-height: 1.3;
+				text-align: center;
+				color: #aaa;
+				border: 1px solid #e5e5e5;
+				border-right: 0;
+				* {
+					width: 100%;
+					height: 100%;
+				}
+			}
+			&:hover {
+				> a {
+					background: #e8e8e8;
+					color: #666;
+				}
+			}
+			&.active {
+				a {
+					background: #d4f7f4;
+					color: #666;
+				}
+			}
+			&.disabled {
+				> a {
+					background: #f1f1f1;
+					color: #ccc;
+					opacity: 0.8;
+					cursor: default;
+				}
+			}
+
+			&:first-child {
+				> a {
+					border-radius: 5px 0 0 5px;
+				}
+			}
+			&:last-child {
+				> a {
+					border-right: 1px solid #e5e5e5;
+					border-radius: 0 5px 5px 0;
+				}
+			}
+		}
+	}
+}
+</style>

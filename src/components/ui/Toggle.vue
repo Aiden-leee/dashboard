@@ -60,4 +60,89 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.ui-switch {
+	display: inline-block;
+	&.basic {
+		> input[type='checkbox'] {
+			& + label {
+				width: 50px;
+				&:before {
+					content: '';
+				}
+				&:after {
+					content: '';
+				}
+			}
+			&:disabled + label {
+				opacity: 0.4;
+				pointer-events: none;
+			}
+			&:not(:disabled):checked + label {
+				> .round {
+					transform: translate(27px, -50%);
+				}
+			}
+		}
+	}
+	> .text {
+		display: inline-block;
+		margin-right: 5px;
+		transform: translate(0, -50%);
+	}
+	> input[type='checkbox'] {
+		@include ui_input;
+		& + label {
+			position: relative;
+			display: inline-block;
+			cursor: pointer;
+			width: 60px;
+			height: 26px;
+			border-radius: 25px;
+			background: $uiBorderColor;
+			margin: 0 2px;
+			&:before,
+			&:after {
+				position: absolute;
+				color: #fff;
+			}
+			&:before {
+				content: 'OFF';
+				top: 6px;
+				right: 6px;
+			}
+			&:after {
+				content: 'ON';
+				display: none;
+				top: 6px;
+				left: 10px;
+			}
+			> .round {
+				position: absolute;
+				display: block;
+				width: 18px;
+				height: 18px;
+				top: 50%;
+				transform: translate(4px, -50%);
+				border-radius: 50%;
+				background: #fff;
+				transition: all 0.2s ease-out;
+			}
+		}
+		&:checked + label {
+			background: $pointColor;
+
+			&:before {
+				display: none;
+			}
+			&:after {
+				display: block;
+			}
+			> .round {
+				background: #f5f5f5;
+				transform: translate(36px, -50%);
+			}
+		}
+	}
+}
+</style>

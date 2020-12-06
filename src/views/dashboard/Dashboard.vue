@@ -79,7 +79,7 @@
 			<div class="col col-2">
 				<div class="card">
 					<div class="card_header">
-						<h4>Residence</h4>
+						<h4>Address</h4>
 					</div>
 					<div class="card_body">
 						<Map address="경기 김포시 풍무로69번길 51"></Map>

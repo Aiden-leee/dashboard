@@ -10,24 +10,6 @@
 				color="#f4f7fa"
 				class="mb-1"
 			/>
-			<!-- <div class="ui-input-group mb-1">
-				<label for="username"></label>
-				<input
-					type="email"
-					placeholder="Email"
-					id="username"
-					v-model="username"
-				/>
-			</div> -->
-			<!-- <div class="ui-input-group mb-2">
-				<label for="password"></label>
-				<input
-					type="password"
-					placeholder="Password"
-					id="password"
-					v-model="password"
-				/>
-			</div> -->
 			<Input
 				type="password"
 				id="password"
@@ -36,13 +18,12 @@
 				color="#f4f7fa"
 				class="mb-2"
 			/>
-			<button
+			<Button
 				type="submit"
+				name="LOGIN"
 				class="ui-btn btn-primary"
 				:disabled="!username || !password"
-			>
-				LOGIN
-			</button>
+			/>
 			<p class="mt-2">
 				Don’t have an account?
 				<router-link to="/signup">Signup</router-link>
@@ -53,6 +34,7 @@
 
 <script>
 import Input from '@/components/ui/Input.vue';
+import Button from '@/components/ui/Button.vue';
 export default {
 	data() {
 		return {
@@ -62,6 +44,7 @@ export default {
 	},
 	components: {
 		Input,
+		Button,
 	},
 	methods: {
 		async submitForm() {
@@ -86,4 +69,4 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss"></style>
